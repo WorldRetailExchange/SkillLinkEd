@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { type Tutor } from "@shared/schema";
-import { Search, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import DetailModal from "@/components/DetailModal";
 
 export default function Tutors() {
@@ -36,13 +36,64 @@ export default function Tutors() {
   }
 
   return (
-    <div className="px-40 flex flex-1 justify-center py-5">
+    <div className="gap-1 px-6 flex flex-1 justify-center py-5">
+      <div className="layout-content-container flex flex-col w-80">
+        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Filter</h2>
+        <div className="flex flex-col p-4 gap-3">
+          <details className="flex flex-col rounded-lg border border-[#dbe0e6] bg-white px-[15px] py-[7px] group" open>
+            <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+              <p className="text-[#111418] text-sm font-medium leading-normal">Subjects</p>
+              <div className="text-[#111418] group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+              </div>
+            </summary>
+            <p className="text-[#60748a] text-sm font-normal leading-normal pb-2">English, Math, Coding, Arts</p>
+          </details>
+          <details className="flex flex-col rounded-lg border border-[#dbe0e6] bg-white px-[15px] py-[7px] group">
+            <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+              <p className="text-[#111418] text-sm font-medium leading-normal">Online/Offline</p>
+              <div className="text-[#111418] group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+              </div>
+            </summary>
+            <p className="text-[#60748a] text-sm font-normal leading-normal pb-2">English, Math, Coding, Arts</p>
+          </details>
+          <details className="flex flex-col rounded-lg border border-[#dbe0e6] bg-white px-[15px] py-[7px] group">
+            <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+              <p className="text-[#111418] text-sm font-medium leading-normal">Distance</p>
+              <div className="text-[#111418] group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+              </div>
+            </summary>
+            <p className="text-[#60748a] text-sm font-normal leading-normal pb-2">English, Math, Coding, Arts</p>
+          </details>
+          <details className="flex flex-col rounded-lg border border-[#dbe0e6] bg-white px-[15px] py-[7px] group">
+            <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+              <p className="text-[#111418] text-sm font-medium leading-normal">Amount</p>
+              <div className="text-[#111418] group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+              </div>
+            </summary>
+            <p className="text-[#60748a] text-sm font-normal leading-normal pb-2">English, Math, Coding, Arts</p>
+          </details>
+        </div>
+      </div>
       <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
         <div className="px-4 py-3">
           <label className="flex flex-col min-w-40 h-12 w-full">
             <div className="flex w-full flex-1 items-stretch rounded-lg h-full">
               <div className="text-[#60748a] flex border-none bg-[#f0f2f5] items-center justify-center pl-4 rounded-l-lg border-r-0">
-                <Search size={24} />
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                </svg>
               </div>
               <input
                 placeholder="Search for tutors by subject, level, and location"
@@ -54,10 +105,7 @@ export default function Tutors() {
             </div>
           </label>
         </div>
-        
-        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-          Featured Tutors
-        </h2>
+        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured Tutors</h2>
         
         <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <div className="flex items-stretch p-4 gap-3">

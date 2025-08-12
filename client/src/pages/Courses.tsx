@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { type Course } from "@shared/schema";
-import { Search } from "lucide-react";
+
 import DetailModal from "@/components/DetailModal";
 
 export default function Courses() {
@@ -33,43 +33,101 @@ export default function Courses() {
   }
 
   return (
-    <div className="px-40 flex flex-1 justify-center py-5">
-      <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
-        <div className="px-4 py-3">
-          <label className="flex flex-col min-w-40 h-12 w-full">
-            <div className="flex w-full flex-1 items-stretch rounded-lg h-full">
-              <div className="text-[#60748a] flex border-none bg-[#f0f2f5] items-center justify-center pl-4 rounded-l-lg border-r-0">
-                <Search size={24} />
+    <div className="gap-1 px-6 flex flex-1 justify-center py-5">
+      <div className="layout-content-container flex flex-col w-80">
+        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Filter</h2>
+        <div className="flex flex-col p-4 gap-3">
+          <details className="flex flex-col rounded-lg bg-[#f0f2f5] px-4 py-2 group" open>
+            <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+              <p className="text-[#111418] text-sm font-medium leading-normal">Education Course</p>
+              <div className="text-[#111418] group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
               </div>
-              <input
-                placeholder="Search for events, courses, tutors"
-                className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-full placeholder:text-[#60748a] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                data-testid="input-search-courses"
-              />
-            </div>
-          </label>
+            </summary>
+            <p className="text-[#60748a] text-sm font-normal leading-normal pb-2">Robotics and Coding Programs Advanced Technology Courses</p>
+          </details>
+          <details className="flex flex-col rounded-lg bg-[#f0f2f5] px-4 py-2 group">
+            <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+              <p className="text-[#111418] text-sm font-medium leading-normal">Sports Course</p>
+              <div className="text-[#111418] group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+              </div>
+            </summary>
+            <p className="text-[#60748a] text-sm font-normal leading-normal pb-2">Robotics and Coding Programs Advanced Technology Courses</p>
+          </details>
+          <details className="flex flex-col rounded-lg bg-[#f0f2f5] px-4 py-2 group">
+            <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+              <p className="text-[#111418] text-sm font-medium leading-normal">Creative Arts Course</p>
+              <div className="text-[#111418] group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+              </div>
+            </summary>
+            <p className="text-[#60748a] text-sm font-normal leading-normal pb-2">Robotics and Coding Programs Advanced Technology Courses</p>
+          </details>
+          <details className="flex flex-col rounded-lg bg-[#f0f2f5] px-4 py-2 group">
+            <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+              <p className="text-[#111418] text-sm font-medium leading-normal">Extra Curriculum Courses</p>
+              <div className="text-[#111418] group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+              </div>
+            </summary>
+            <p className="text-[#60748a] text-sm font-normal leading-normal pb-2">Robotics and Coding Programs Advanced Technology Courses</p>
+          </details>
+          <details className="flex flex-col rounded-lg bg-[#f0f2f5] px-4 py-2 group">
+            <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+              <p className="text-[#111418] text-sm font-medium leading-normal">Most Popular Trending Courses</p>
+              <div className="text-[#111418] group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+              </div>
+            </summary>
+            <p className="text-[#60748a] text-sm font-normal leading-normal pb-2">Robotics and Coding Programs Advanced Technology Courses</p>
+          </details>
         </div>
-        
-        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-          Courses
-        </h2>
-        
+      </div>
+      <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div className="flex flex-wrap justify-between gap-3 p-4">
+          <div className="flex min-w-72 flex-col gap-3">
+            <p className="text-[#111418] tracking-light text-[32px] font-bold leading-tight">Courses</p>
+            <p className="text-[#60748a] text-sm font-normal leading-normal">Explore a wide range of courses to enhance your skills and knowledge.</p>
+          </div>
+        </div>
         <div className="flex gap-3 p-3 flex-wrap pr-4">
-          <div className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0f2f5] pl-4 pr-4">
-            <p className="text-[#111418] text-sm font-medium leading-normal">Category</p>
-          </div>
-          <div className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0f2f5] pl-4 pr-4">
+          <button className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0f2f5] pl-4 pr-2">
+            <p className="text-[#111418] text-sm font-medium leading-normal">Subject</p>
+            <div className="text-[#111418]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+              </svg>
+            </div>
+          </button>
+          <button className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0f2f5] pl-4 pr-2">
             <p className="text-[#111418] text-sm font-medium leading-normal">Level</p>
-          </div>
-          <div className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0f2f5] pl-4 pr-4">
+            <div className="text-[#111418]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+              </svg>
+            </div>
+          </button>
+          <button className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0f2f5] pl-4 pr-2">
             <p className="text-[#111418] text-sm font-medium leading-normal">Duration</p>
-          </div>
-          <div className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0f2f5] pl-4 pr-4">
-            <p className="text-[#111418] text-sm font-medium leading-normal">Price</p>
-          </div>
+            <div className="text-[#111418]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+              </svg>
+            </div>
+          </button>
         </div>
+        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Education</h2>
         
         <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
           {filteredCourses.map((course, index) => (

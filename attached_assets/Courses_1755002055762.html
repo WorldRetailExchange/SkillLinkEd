@@ -1,0 +1,296 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-[#111418]">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+                </svg>
+              </div>
+              <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">SkillLink</h2>
+            </div>
+            <div class="flex items-center gap-9">
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="Event.html">Events</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="Courses.html">Courses</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="Tutor.html">Tutors</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#60748a] flex border-none bg-[#f0f2f5] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-full placeholder:text-[#60748a] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Create</span>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDS462-IsqEBWlSCPH-AeOvW9XR3Ov_T0ayddLJn6e-pcHePkDxPhLm6MV47d5CDZdL7xKe4E9KLJRm6h3p-uhzLFHBY8Jt56KaEHl2UkldAdjb4MD89DMpvAfLxbLvFfmHk9KptxX1kJXiE3MXeAgLuodDZ4NiPft4ys4ueRhRhm9OEFX1eYpbVJth-GXGnXoCKsueLOOCPWLs8UNR8lEQFnvZIjSdPlAp1brc3gf2gZddNQ3EWnop_iY2DoZeP0cOfXPa4Bg6WmM");'
+            ></div>
+          </div>
+        </header>
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-80">
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Filter</h2>
+            <div class="flex flex-col p-4 gap-3">
+              <details class="flex flex-col rounded-lg bg-[#f0f2f5] px-4 py-2 group" open="">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#111418] text-sm font-medium leading-normal">Education Course</p>
+                  <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#60748a] text-sm font-normal leading-normal pb-2">Robotics and Coding Programs Advanced Technology Courses</p>
+              </details>
+              <details class="flex flex-col rounded-lg bg-[#f0f2f5] px-4 py-2 group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#111418] text-sm font-medium leading-normal">Sports Course</p>
+                  <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#60748a] text-sm font-normal leading-normal pb-2">Robotics and Coding Programs Advanced Technology Courses</p>
+              </details>
+              <details class="flex flex-col rounded-lg bg-[#f0f2f5] px-4 py-2 group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#111418] text-sm font-medium leading-normal">Creative Arts Course</p>
+                  <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#60748a] text-sm font-normal leading-normal pb-2">Robotics and Coding Programs Advanced Technology Courses</p>
+              </details>
+              <details class="flex flex-col rounded-lg bg-[#f0f2f5] px-4 py-2 group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#111418] text-sm font-medium leading-normal">Extra Curriculum Courses</p>
+                  <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#60748a] text-sm font-normal leading-normal pb-2">Robotics and Coding Programs Advanced Technology Courses</p>
+              </details>
+              <details class="flex flex-col rounded-lg bg-[#f0f2f5] px-4 py-2 group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#111418] text-sm font-medium leading-normal">Most Popular Trending Courses</p>
+                  <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#60748a] text-sm font-normal leading-normal pb-2">Robotics and Coding Programs Advanced Technology Courses</p>
+              </details>
+            </div>
+          </div>
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight">Courses</p>
+                <p class="text-[#60748a] text-sm font-normal leading-normal">Explore a wide range of courses to enhance your skills and knowledge.</p>
+              </div>
+            </div>
+            <div class="flex gap-3 p-3 flex-wrap pr-4">
+              <button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0f2f5] pl-4 pr-2">
+                <p class="text-[#111418] text-sm font-medium leading-normal">Subject</p>
+                <div class="text-[#111418]" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                  </svg>
+                </div>
+              </button>
+              <button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0f2f5] pl-4 pr-2">
+                <p class="text-[#111418] text-sm font-medium leading-normal">Level</p>
+                <div class="text-[#111418]" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                  </svg>
+                </div>
+              </button>
+              <button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0f2f5] pl-4 pr-2">
+                <p class="text-[#111418] text-sm font-medium leading-normal">Duration</p>
+                <div class="text-[#111418]" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Education</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgSLV3JGh9l2S22EpxzKMIZflHYF07JOWMQmBR5BtnOSWtKWZAPVas3opPSxgK_TZKxBH0Y2S0nGp9QfyWRPIeUAg-cfJpByESoQphwrpuBm-gupxcRBc472XpMojsaMLyy3a4yuQgcr5a-sG5fAMtj9Ej9m0brKPOdQr5sJnjGjmjntz_KrMO3PdsX6SI7XIw9Px8AcjQipq_AtqjEL6_cMghJ5qp53qGW94pcBaf3nB-QIdKmoWvHnmmEwxb5am5IjvxcIYC2_Y");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">Mathematics</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Master the fundamentals of mathematics.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_nNSJt6znsuBsCwPRFs-m1sVTklvurqvW2V7OphZ2s36f_smTteUdGTYzH1TsO3FUSy75WPBYHMuuSPTyHKPMvUQW6ucuejoJglm_l47W_ViS9YkP_fE7qD0Rpj2zCpgiuc81GbeautlXbav2gL3FgiurCSIlb9Wj1KwEn9xGO7ZO65PgJC8LbmYz6AR1TmHgH3SPWj-cxZ17GTRQIH33zYI5YO6SJP0vvcruRTt4KX2OT657J3sBAbM9566dtJjjxjRRLtA42t8");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">Science</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Explore the wonders of science.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuG2rz3zbUp5RCDTfbq4lRNd7_YG_IcHoXl_JtBCFxUNfnDKDD4zN8oglpY-_VUMlWqQQQuW6O5gr0_bhaWeZKzYZVEh9Nt428afceT8iriEE2mVuyYXKn0H81FcJlY_a-7yadbiTNgVYc4Wqa06Wix797MQ9y3F-xyLrgpG7JgDNGh26fgPO87Oe1thu5QqiGLET83HiCeeVQlZjf0hVd8L31xsbsP2wcjEEclQCjsxsEFcLtCybsKL3e1GNeoNLrcLNMxx7P55w");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">English</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Enhance your language skills.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDek0IY1q7RxBpkRWbFeGJbZ3NqH2FJbIZGRLPFtOda7gyIM0pzcRHstspKWGC0RjFt6JuPAqAw0ax-K7wXNTSiqfHLyEFJN1EFwct4gbWO8Rq6jARabc-8gf_Q4SeZhJH4oJFM0nTguFOz9tRe9GiIN-yithiWMUaObcqp0Bx893rx8kjj_1Me3_bHKR6QxlwOAtYRbreENukqCEf5V1ljnON-y7aixOE5HDdsozgAjJnF3zz1OAtnAYTE-mobwD07MtnDN1Vr8Pg");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">History</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Discover the past and its impact.</p>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Sports</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMId9k-w-suS_3IgVCVGD7wRwO9RCuaLpFyw0mXWAmjuGhvfDQrW4740kPYKSuDGgllTiZ66QbvSzRBZGVo9qqEByDvBJWQ0q4xKcCvQUKc3lt31joWv19DYDpN0maYLZZquQV12gXWAI1PIt6LZE4lSlcrdSh1GXEa4Xnyeqn3_-lgTTwz0Byl2Bo7KT9e50Af3sxwJJ8_-YVeo1_9L661kn_S5CqO7jnMu3w3TCjsVbk3bI0wUn4YsPTuFst8WFrDQseTF3E1mE");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">Basketball</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Learn the basics of basketball.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAvZqQ_ruqKRchtdrgmCcMoL1VhkKIZgzKFkvjYZp1qcGEBSu7Nzq8JHhWfrFw_dm2crKz1KuQUX0jwNhCcpH7nBf2K7IeIEfGI8u4xZWpX1l0dVHKfi-L8fS2DufnYqy9WKvW_ln8GoT-KK39kyUDvodBIcC6unlfWQhfVMU1pIbbJTEVRdJFUnnr6zIiKaAwpa30d8OtK2PLSdA-rNecvhIxQ5MgPvenjh-bOwBSHrySwmjOzYTgUuyww11K9xjiHEb5MJvJV2I");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">Soccer</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Improve your soccer skills.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLOW0yIM4zdgBI2-uHd_AWL6pu8b_WLJQu04770LCfsj9fbzaF5lirgU43YIEUzWOUn5TexvhUSANvbcF2bn2X9dg0ZIKh_4vI2v4sM6C38GhOqgloEU-Ls5llGqJ9JDUGimwgwIuV7x5p2G4T2RtRRobayLAOS6H6QC2b_yHQDCHNWRKbKxz71FSX9esjwooTGoT5iMWSrAgthNJqVUPSSL9C4v0sWlJQtzxcNBKE_9_6U0-rdshogDdBk0aO6uvLIzUlhPhkW3Q");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">Swimming</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Master different swimming strokes.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIHT75H_tcl3nWtlF37afrSiF0fIK5pK7niJH9ccMzBvog2sCtP6b99DSJkFMjHFRYWgZH3fM1CKVWNTvRa8QDUYLujCzX1Ri_PW1ZoQn6WrmJzlkxldcQ_22Ux3HssbpbvjIqUlvaat7KpLDeVQkKRWj5zDh7TFNF5pij2qcuAm1YKZIA_ia51n_gv04GlgCa3kBmlZ2jI-j6pQQE_ofczRw2-7BoDkE9qV4DPaUg0zVgNm6iav2l5HBFFw6urcYBrrM1HgwJQmU");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">Tennis</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Enhance your tennis game.</p>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Arts</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIgvwatI1xE22hwuYuko4rexORQQMrrZbgWR5jJ_AJkON1tYK92Wfoleg3yhb3Au4SRRLUDUJp5RrsB9_hCgmwhg1IkywpNFWurwDg1e9Hjmxcqt1RCpiJNBKJjeNzIt0QkoQSlBlrhpg_SXer1DW_4YzG6xiSeeJYRdT1oW7rCN2zVTJxihvlbJcFacCsx8PB2APeqrEEUWqv-1dJ9OAU1oZCiflEhmEKls2doKye1lhWtT7Z0GmgJaN8nJBMPTFUZvvU7UD_h0o");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">Drawing</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Learn to draw various subjects.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmOQNEjZrx-kMxyOjk6DwfHi-1I95vCsTxcZsS4q0eU1a7wtMl5CU85wi_xUS8voREbSYnzW8RRkT9WtQzYhsTvEnstjwdAPX5GCDlg36mALKvIubYsPZqpDTHcDY8aO_H8iOkDC6WUuXdTgbX4yCquQn4iadaplwgKcrGEZAQ7ULn1qGOZJBfrkM8aa0jrruPB_tqY8io12DnWnCVtmX1zrQM6TVtBpRUcUGb41NAukzC_xQpspi9wZGGdpVxOb_cOTaKt5-WdAc");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">Painting</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Explore different painting techniques.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAzByBfBV3MlmwVm3Iq28Iv-r0n9Mql7pddeqKXYoU_tqnnIBIn-KNIbVIQi1jycZAg6-iYAu6fYMV926N6ycOY1Y1wfWVE1b-6c1hQ7mIjG957VXWhkYj30e_JY4uByyEsG6-Cb5cOTA8D7jm22Y4ZMe_TsCzpF3STfCpSDoMGuLmx06bteM4HQC7IIwqUvU18nXS6dOdJuDat34MLcOEiJ0TO7U6h-NO_rDdKREV1UepAC1c7AKX5Euoh2Rs9mf8u-48ivc3ZXM");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">Music</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Master musical instruments.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtbhi3QNa4kKY3q_b4iUw04Z8WQq3OqSnKkBIPuqMkV0R9AU0jaK_pdSojC6nWgnneo35pKxzr3zNd0j7EJcvmU9TfmNQ3UDvwRYNHn6LIbipX075auKuqQeLN8ry5N7UB8YQoZ1xlmdQIuTRfo1cgF5lHJZxQwz4I8Mod0dfQ5RbHdMMpKQJ7Z5fK-9sFOHGo7xAT-YEni1U3vaGSvtVhbptx1D1J5CDJ56qhDFoInUXDfksGjRifW19cS-zyI8tM1mGUsXxz-5U");'
+                ></div>
+                <div>
+                  <p class="text-[#111418] text-base font-medium leading-normal">Dance</p>
+                  <p class="text-[#60748a] text-sm font-normal leading-normal">Learn various dance styles.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
