@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Search, Bell } from "lucide-react";
 import SearchInput from "@/components/SearchInput";
+import Footer from "@/components/Footer";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -112,6 +113,9 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Main Content */}
       <div className="flex-1">{children}</div>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { Search } from "lucide-react";
+
 import { type Tutor, type Event, type Course, type Workshop } from "@shared/schema";
 import DetailModal from "@/components/DetailModal";
 
@@ -41,7 +41,9 @@ export default function Home() {
           <label className="flex flex-col min-w-40 h-12 w-full">
             <div className="flex w-full flex-1 items-stretch rounded-lg h-full">
               <div className="text-[#60748a] flex border-none bg-[#f0f2f5] items-center justify-center pl-4 rounded-l-lg border-r-0">
-                <Search size={24} />
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                </svg>
               </div>
               <input
                 placeholder="Search for events, courses, workshops, or tutors"
@@ -122,104 +124,122 @@ export default function Home() {
           </div>
         </div>
 
-        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-          Find a Tutor
-        </h2>
-        <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex items-stretch p-4 gap-8">
-            {tutors.slice(0, 4).map((tutor, index) => (
-              <div 
-                key={tutor.id} 
-                className="flex h-full flex-1 flex-col gap-4 text-center rounded-lg min-w-52 pt-4 cursor-pointer hover:transform hover:scale-105 transition-transform"
-                onClick={() => handleItemClick(tutor, "tutor")}
-                data-testid={`card-featured-tutor-${tutor.id}`}
-              >
-                <div
-                  className="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full"
-                  style={{
-                    backgroundImage: `url("https://images.unsplash.com/photo-${1500000000000 + index}?w=200&h=200&fit=crop&crop=face")`
-                  }}
-                ></div>
-                <div>
-                  <p className="text-[#111418] text-base font-medium leading-normal">{tutor.name}</p>
-                  <p className="text-[#60748a] text-sm font-normal leading-normal">{tutor.subject} Tutor</p>
-                </div>
+        {/* Tab Content */}
+        {activeTab === "tutors" && (
+          <>
+            <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+              Find a Tutor
+            </h2>
+            <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div className="flex items-stretch p-4 gap-8">
+                {tutors.slice(0, 4).map((tutor, index) => (
+                  <div 
+                    key={tutor.id} 
+                    className="flex h-full flex-1 flex-col gap-4 text-center rounded-lg min-w-52 pt-4 cursor-pointer hover:transform hover:scale-105 transition-transform"
+                    onClick={() => handleItemClick(tutor, "tutor")}
+                    data-testid={`card-featured-tutor-${tutor.id}`}
+                  >
+                    <div
+                      className="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full"
+                      style={{
+                        backgroundImage: `url("https://images.unsplash.com/photo-${1500000000000 + index}?w=200&h=200&fit=crop&crop=face")`
+                      }}
+                    ></div>
+                    <div>
+                      <p className="text-[#111418] text-base font-medium leading-normal">{tutor.name}</p>
+                      <p className="text-[#60748a] text-sm font-normal leading-normal">{tutor.subject} Tutor</p>
+                      <p className="text-[#60748a] text-sm font-normal leading-normal">{tutor.price}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          </>
+        )}
 
-        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-          Featured Events
-        </h2>
-        <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex items-stretch p-4 gap-3">
-            {events.slice(0, 4).map((event, index) => (
-              <div 
-                key={event.id} 
-                className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 cursor-pointer hover:transform hover:scale-105 transition-transform"
-                onClick={() => handleItemClick(event, "event")}
-                data-testid={`card-featured-event-${event.id}`}
-              >
-                <div
-                  className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
-                  style={{
-                    backgroundImage: `url("https://images.unsplash.com/photo-${1600000000000 + index}?w=400&h=225&fit=crop")`
-                  }}
-                ></div>
-                <p className="text-[#111418] text-base font-medium leading-normal">{event.name}</p>
+        {activeTab === "events" && (
+          <>
+            <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+              Featured Events
+            </h2>
+            <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div className="flex items-stretch p-4 gap-3">
+                {events.slice(0, 4).map((event, index) => (
+                  <div 
+                    key={event.id} 
+                    className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 cursor-pointer hover:transform hover:scale-105 transition-transform"
+                    onClick={() => handleItemClick(event, "event")}
+                    data-testid={`card-featured-event-${event.id}`}
+                  >
+                    <div
+                      className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                      style={{
+                        backgroundImage: `url("https://images.unsplash.com/photo-${1600000000000 + index}?w=400&h=225&fit=crop")`
+                      }}
+                    ></div>
+                    <p className="text-[#111418] text-base font-medium leading-normal">{event.name}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          </>
+        )}
 
-        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-          Popular Courses
-        </h2>
-        <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex items-stretch p-4 gap-3">
-            {courses.slice(0, 4).map((course, index) => (
-              <div 
-                key={course.id} 
-                className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 cursor-pointer hover:transform hover:scale-105 transition-transform"
-                onClick={() => handleItemClick(course, "course")}
-                data-testid={`card-featured-course-${course.id}`}
-              >
-                <div
-                  className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
-                  style={{
-                    backgroundImage: `url("https://images.unsplash.com/photo-${1700000000000 + index}?w=400&h=225&fit=crop")`
-                  }}
-                ></div>
-                <p className="text-[#111418] text-base font-medium leading-normal">{course.name}</p>
+        {activeTab === "courses" && (
+          <>
+            <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+              Popular Courses
+            </h2>
+            <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div className="flex items-stretch p-4 gap-3">
+                {courses.slice(0, 4).map((course, index) => (
+                  <div 
+                    key={course.id} 
+                    className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 cursor-pointer hover:transform hover:scale-105 transition-transform"
+                    onClick={() => handleItemClick(course, "course")}
+                    data-testid={`card-featured-course-${course.id}`}
+                  >
+                    <div
+                      className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                      style={{
+                        backgroundImage: `url("https://images.unsplash.com/photo-${1700000000000 + index}?w=400&h=225&fit=crop")`
+                      }}
+                    ></div>
+                    <p className="text-[#111418] text-base font-medium leading-normal">{course.name}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          </>
+        )}
 
-        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-          Upcoming Workshops
-        </h2>
-        <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex items-stretch p-4 gap-3">
-            {workshops.slice(0, 4).map((workshop, index) => (
-              <div 
-                key={workshop.id} 
-                className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 cursor-pointer hover:transform hover:scale-105 transition-transform"
-                onClick={() => handleItemClick(workshop, "workshop")}
-                data-testid={`card-featured-workshop-${workshop.id}`}
-              >
-                <div
-                  className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
-                  style={{
-                    backgroundImage: `url("https://images.unsplash.com/photo-${1800000000000 + index}?w=400&h=225&fit=crop")`
-                  }}
-                ></div>
-                <p className="text-[#111418] text-base font-medium leading-normal">{workshop.name}</p>
+        {activeTab === "workshops" && (
+          <>
+            <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+              Upcoming Workshops
+            </h2>
+            <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div className="flex items-stretch p-4 gap-3">
+                {workshops.slice(0, 4).map((workshop, index) => (
+                  <div 
+                    key={workshop.id} 
+                    className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 cursor-pointer hover:transform hover:scale-105 transition-transform"
+                    onClick={() => handleItemClick(workshop, "workshop")}
+                    data-testid={`card-featured-workshop-${workshop.id}`}
+                  >
+                    <div
+                      className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                      style={{
+                        backgroundImage: `url("https://images.unsplash.com/photo-${1800000000000 + index}?w=400&h=225&fit=crop")`
+                      }}
+                    ></div>
+                    <p className="text-[#111418] text-base font-medium leading-normal">{workshop.name}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          </>
+        )}
 
         <DetailModal
           isOpen={isModalOpen}
