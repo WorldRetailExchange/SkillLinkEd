@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Search, Bell } from "lucide-react";
-import SearchInput from "./SearchInput";
+import SearchInput from "@/components/SearchInput";
 
 interface LayoutProps {
   children: React.ReactNode;

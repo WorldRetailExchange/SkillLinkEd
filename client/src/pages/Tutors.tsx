@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { type Tutor } from "@shared/schema";
-import SearchInput from "@/components/SearchInput";
-import FilterSidebar from "@/components/FilterSidebar";
-import CardGrid from "@/components/CardGrid";
+import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 import DetailModal from "@/components/DetailModal";
 
 export default function Tutors() {
@@ -14,22 +12,6 @@ export default function Tutors() {
   const { data: tutors = [], isLoading } = useQuery<Tutor[]>({
     queryKey: ["/api/tutors"],
   });
-
-  const filterGroups = [
-    {
-      title: "Subjects",
-      description: "English, Math, Coding, Arts",
-      isOpen: true,
-    },
-    {
-      title: "Online/Offline",
-      description: "Online Sessions, In-Person Meetings",
-    },
-    {
-      title: "Experience Level",
-      description: "New (0-2 years), Experienced (3-5 years), Expert (6+ years)",
-    },
-  ];
 
   const filteredTutors = tutors.filter((tutor) =>
     tutor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -42,6 +24,9 @@ export default function Tutors() {
     setIsModalOpen(true);
   };
 
+  const featuredTutors = filteredTutors.slice(0, 5);
+  const allTutors = filteredTutors.slice(0, 3);
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-96">
@@ -51,30 +36,107 @@ export default function Tutors() {
   }
 
   return (
-    <div className="gap-1 px-6 flex flex-1 justify-center py-5">
-      <FilterSidebar filterGroups={filterGroups} />
+    <div className="px-40 flex flex-1 justify-center py-5">
       <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
         <div className="px-4 py-3">
-          <SearchInput
-            placeholder="Search for tutors by subject, level, and location"
-            className="min-w-40 h-12 w-full"
-            value={searchTerm}
-            onChange={setSearchTerm}
-          />
+          <label className="flex flex-col min-w-40 h-12 w-full">
+            <div className="flex w-full flex-1 items-stretch rounded-lg h-full">
+              <div className="text-[#60748a] flex border-none bg-[#f0f2f5] items-center justify-center pl-4 rounded-l-lg border-r-0">
+                <Search size={24} />
+              </div>
+              <input
+                placeholder="Search for tutors by subject, level, and location"
+                className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-full placeholder:text-[#60748a] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                data-testid="input-search-tutors"
+              />
+            </div>
+          </label>
         </div>
+        
         <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
           Featured Tutors
         </h2>
+        
+        <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex items-stretch p-4 gap-3">
+            {featuredTutors.map((tutor, index) => (
+              <div 
+                key={tutor.id} 
+                className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 cursor-pointer hover:transform hover:scale-105 transition-transform"
+                onClick={() => handleTutorClick(tutor)}
+                data-testid={`card-featured-tutor-${tutor.id}`}
+              >
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
+                  style={{
+                    backgroundImage: `url("https://images.unsplash.com/photo-${1500000000000 + index}?w=200&h=200&fit=crop&crop=face")`
+                  }}
+                ></div>
+                <div>
+                  <p className="text-[#111418] text-base font-medium leading-normal">{tutor.name}</p>
+                  <p className="text-[#60748a] text-sm font-normal leading-normal">{tutor.subject} Tutor</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+          All Tutors
+        </h2>
+        
+        {allTutors.map((tutor, index) => (
+          <div key={tutor.id} className="p-4">
+            <div 
+              className="flex items-stretch justify-between gap-4 rounded-lg cursor-pointer hover:bg-[#f8f9fa] transition-colors p-2 -m-2"
+              onClick={() => handleTutorClick(tutor)}
+              data-testid={`card-tutor-${tutor.id}`}
+            >
+              <div className="flex flex-[2_2_0px] flex-col gap-4">
+                <div className="flex flex-col gap-1">
+                  <p className="text-[#111418] text-base font-bold leading-tight">{tutor.name}</p>
+                  <p className="text-[#60748a] text-sm font-normal leading-normal">{tutor.subject} Tutor</p>
+                </div>
+                <button
+                  className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-fit"
+                  data-testid={`button-view-profile-${tutor.id}`}
+                >
+                  <span className="truncate">View Profile</span>
+                </button>
+              </div>
+              <div
+                className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                style={{
+                  backgroundImage: `url("https://images.unsplash.com/photo-${1500000000000 + index + 100}?w=300&h=169&fit=crop&crop=face")`
+                }}
+              ></div>
+            </div>
+          </div>
+        ))}
+        
+        <div className="flex items-center justify-center p-4">
+          <a href="#" className="flex size-10 items-center justify-center">
+            <ChevronLeft size={18} className="text-[#111418]" />
+          </a>
+          <a className="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-[#111418] rounded-full bg-[#f0f2f5]" href="#">1</a>
+          <a className="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111418] rounded-full" href="#">2</a>
+          <a className="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111418] rounded-full" href="#">3</a>
+          <a className="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111418] rounded-full" href="#">4</a>
+          <a className="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111418] rounded-full" href="#">5</a>
+          <a href="#" className="flex size-10 items-center justify-center">
+            <ChevronRight size={18} className="text-[#111418]" />
+          </a>
+        </div>
 
-        {filteredTutors.length === 0 ? (
+        {filteredTutors.length === 0 && (
           <div className="flex items-center justify-center min-h-96">
             <div className="text-center">
               <p className="text-[#60748a] text-lg">No tutors found</p>
-              <p className="text-[#60748a] text-sm">Try adjusting your search or filters</p>
+              <p className="text-[#60748a] text-sm">Try adjusting your search</p>
             </div>
           </div>
-        ) : (
-          <CardGrid items={filteredTutors} type="tutor" onItemClick={handleTutorClick} />
         )}
 
         <DetailModal
