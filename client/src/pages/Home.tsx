@@ -241,6 +241,79 @@ export default function Home() {
           </>
         )}
 
+        {/* Always Show Featured Sections */}
+        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+          Featured Events
+        </h2>
+        <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex items-stretch p-4 gap-3">
+            {events.slice(0, 4).map((event, index) => (
+              <div 
+                key={event.id} 
+                className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 cursor-pointer hover:transform hover:scale-105 transition-transform"
+                onClick={() => handleItemClick(event, "event")}
+                data-testid={`card-featured-event-${event.id}`}
+              >
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                  style={{
+                    backgroundImage: `url("https://images.unsplash.com/photo-${1600000000000 + index}?w=400&h=225&fit=crop")`
+                  }}
+                ></div>
+                <p className="text-[#111418] text-base font-medium leading-normal">{event.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+          Popular Courses
+        </h2>
+        <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex items-stretch p-4 gap-3">
+            {courses.slice(0, 4).map((course, index) => (
+              <div 
+                key={course.id} 
+                className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 cursor-pointer hover:transform hover:scale-105 transition-transform"
+                onClick={() => handleItemClick(course, "course")}
+                data-testid={`card-featured-course-${course.id}`}
+              >
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                  style={{
+                    backgroundImage: `url("https://images.unsplash.com/photo-${1700000000000 + index}?w=400&h=225&fit=crop")`
+                  }}
+                ></div>
+                <p className="text-[#111418] text-base font-medium leading-normal">{course.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+          Upcoming Workshops
+        </h2>
+        <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex items-stretch p-4 gap-3">
+            {workshops.slice(0, 4).map((workshop, index) => (
+              <div 
+                key={workshop.id} 
+                className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 cursor-pointer hover:transform hover:scale-105 transition-transform"
+                onClick={() => handleItemClick(workshop, "workshop")}
+                data-testid={`card-featured-workshop-${workshop.id}`}
+              >
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                  style={{
+                    backgroundImage: `url("https://images.unsplash.com/photo-${1800000000000 + index}?w=400&h=225&fit=crop")`
+                  }}
+                ></div>
+                <p className="text-[#111418] text-base font-medium leading-normal">{workshop.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <DetailModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
