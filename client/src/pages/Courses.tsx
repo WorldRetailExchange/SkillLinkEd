@@ -4,6 +4,13 @@ import { type Course } from "@shared/schema";
 
 import DetailModal from "@/components/DetailModal";
 
+const PopularCoursesImage = [
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8743_unnamed%20(5).png?alt=media&token=8f0f28b1-963b-4881-b525-f9fc93102b13",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F5155_unnamed%20(6).png?alt=media&token=059400cf-70ed-4e16-b502-5874d6edcc2b",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F2634_unnamed%20(7).png?alt=media&token=8cfa85e6-d037-4b29-bb0b-b6053bd85d1e",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9580_unnamed%20(8).png?alt=media&token=05225f80-b1a1-43e1-859b-05cf55b2aeb9"
+];
+
 export default function Courses() {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -140,7 +147,7 @@ export default function Courses() {
               <div
                 className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
                 style={{
-                  backgroundImage: `url("https://images.unsplash.com/photo-${1700000000000 + index}?w=400&h=225&fit=crop")`
+                  backgroundImage: `url("${PopularCoursesImage[index % PopularCoursesImage.length]}")`
                 }}
               ></div>
               <div>

@@ -4,6 +4,13 @@ import { type Workshop } from "@shared/schema";
 
 import DetailModal from "@/components/DetailModal";
 
+const workShopImages = [
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8743_unnamed%20(5).png?alt=media&token=8f0f28b1-963b-4881-b525-f9fc93102b13",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4847_unnamed%20(19).png?alt=media&token=5a5d0196-dce3-45ac-a02c-6c89414d3bbb",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F7910_unnamed%20(16).png?alt=media&token=41887db0-31a3-4429-b245-baa36488270f",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4322_unnamed%20(12).png?alt=media&token=9365172b-00ca-4a0a-b7a7-6bd2b094d8ad"
+];
+
 export default function Workshops() {
   const [selectedWorkshop, setSelectedWorkshop] = useState<Workshop | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -133,7 +140,7 @@ export default function Workshops() {
               <div
                 className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
                 style={{
-                  backgroundImage: `url("https://images.unsplash.com/photo-${1800000000000 + index}?w=400&h=225&fit=crop")`
+                  backgroundImage: `url("${workShopImages[index % workShopImages.length]}")`
                 }}
               ></div>
               <div>

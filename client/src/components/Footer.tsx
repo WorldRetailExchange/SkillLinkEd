@@ -24,6 +24,7 @@ export default function Footer() {
               Connecting learners with expert tutors, engaging events, comprehensive courses, and hands-on workshops to unlock your potential.
             </p>
             <div className="flex space-x-4">
+              {/* Social Links */}
               <a href="#" className="text-[#9ca3af] hover:text-white transition-colors" data-testid="link-facebook">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -51,31 +52,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-home">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/tutors" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-tutors">
-                  Find Tutors
-                </Link>
-              </li>
-              <li>
-                <Link href="/events" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-events">
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link href="/courses" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-courses">
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link href="/workshops" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-workshops">
-                  Workshops
-                </Link>
-              </li>
+              <li><Link href="/" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Home</Link></li>
+              <li><Link href="/tutors" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Find Tutors</Link></li>
+              <li><Link href="/events" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Events</Link></li>
+              <li><Link href="/courses" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Courses</Link></li>
+              <li><Link href="/workshops" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Workshops</Link></li>
             </ul>
           </div>
 
@@ -83,86 +64,36 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Categories</h4>
             <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-education">
-                  Education
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-technology">
-                  Technology
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-creative-arts">
-                  Creative Arts
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-business">
-                  Business & Professional
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-sports">
-                  Sports & Fitness
-                </a>
-              </li>
+              <li><a href="/courses" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Education</a></li>
+              <li><a href="/workshops" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Technology</a></li>
+              <li><a href="/events" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Creative Arts</a></li>
+              <li><a href="/events" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Sports & Fitness</a></li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Contact Info (Replaces Support Section) */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Support</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-help">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-contact">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-faq">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-privacy">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-terms">
-                  Terms of Service
-                </a>
-              </li>
-            </ul>
+            <h4 className="text-white font-semibold mb-4">Contact</h4>
+            <p className="text-[#9ca3af] text-sm">
+              <a href="mailto:support@worldretailexchange.com" className="hover:text-white transition-colors">
+                support@worldretailexchange.com
+              </a>
+            </p>
+            <p className="text-[#9ca3af] text-sm mt-2">
+              Chimba, Mumbai, Maharashtra 400050
+            </p>
           </div>
         </div>
 
         {/* Bottom Section */}
         <div className="border-t border-[#374151] mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-[#9ca3af] text-sm">
-              © 2025 SkillLink. All rights reserved.
-            </p>
+            <p className="text-[#9ca3af] text-sm">© 2025 SkillLink. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-careers">
-                Careers
-              </a>
-              <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-blog">
-                Blog
-              </a>
-              <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-partners">
-                Partners
-              </a>
-              <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm" data-testid="footer-link-newsletter">
-                Newsletter
-              </a>
+              <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Careers</a>
+              <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Blog</a>
+              <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Partners</a>
+              <a href="#" className="text-[#9ca3af] hover:text-white transition-colors text-sm">Newsletter</a>
             </div>
           </div>
         </div>

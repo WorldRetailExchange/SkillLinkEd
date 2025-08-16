@@ -5,6 +5,42 @@ import { Link } from "wouter";
 import { type Tutor, type Event, type Course, type Workshop } from "@shared/schema";
 import DetailModal from "@/components/DetailModal";
 
+// const unsplashIds = [
+//   "1507003211169-0a1dd7228f2d",
+//   "1500648767791-00dcc994a43e",
+//   "1522202176988-66273c2fd55f",
+//   "1503023345310-bd7c1de61c7d",
+//   "1506794778202-cad84cf45f1d"
+// ];
+
+const tutorImages = [
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F7972_bigtutor2.webp?alt=media&token=96eef663-5866-4f63-b141-61d74b12c846",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9326_indian-teacher-guy-filming-educational-video-lecture-online-blog-standing-near-blackboard-indoors-virtual-tutoring-e-teaching-209297771.jpg?alt=media&token=4980890d-f8e0-4e67-b90f-60dfa0dde4b7",  
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4277_smiling-professional-indian-female-teacher-remote-tutor-looking-webcam-speaking-giving-online-class-video-conference-call-191073519.jpg?alt=media&token=7935ac6a-803a-4f56-bb14-f85901eea07e",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9969_young-indian-female-school-teacher-smiling-warmly-embracing-diversity-and-inspiring-students-classroom-setting-photo.jpg?alt=media&token=abd5f110-f230-4a6a-8853-22abd936bf7e",
+];
+
+const FeaturedEventImage = [
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4583_unnamed%20(1).png?alt=media&token=a38009f9-98f4-4e85-a6ea-bff91ec32777",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9158_unnamed%20(2).png?alt=media&token=1b27daf9-5be3-4799-bf96-dbf241d8d7e5",  
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F2443_unnamed%20(3).png?alt=media&token=92f29b7e-3f0b-41b6-b572-ecf76e4d52ff",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9437_unnamed%20(4).png?alt=media&token=9ec273fa-bbef-4201-a625-f1875b8578dd",
+];
+
+const PopularCoursesImage = [
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8743_unnamed%20(5).png?alt=media&token=8f0f28b1-963b-4881-b525-f9fc93102b13",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F5155_unnamed%20(6).png?alt=media&token=059400cf-70ed-4e16-b502-5874d6edcc2b",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F2634_unnamed%20(7).png?alt=media&token=8cfa85e6-d037-4b29-bb0b-b6053bd85d1e",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9580_unnamed%20(8).png?alt=media&token=05225f80-b1a1-43e1-859b-05cf55b2aeb9"
+];
+
+const workShopImages = [
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4564_unnamed%20(9).png?alt=media&token=c281ad32-0fa3-415c-8f74-2d7ec23173ce",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9091_unnamed%20(10).png?alt=media&token=79fb7e65-d4d4-4269-ab26-8a1eb51bc536",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3853_unnamed%20(11).png?alt=media&token=082c6957-fc0b-41c6-b65f-68e8ceaab24e",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4322_unnamed%20(12).png?alt=media&token=9365172b-00ca-4a0a-b7a7-6bd2b094d8ad"
+]
+
 export default function Home() {
   const [selectedItem, setSelectedItem] = useState<any | null>(null);
   const [selectedType, setSelectedType] = useState<string>("");
@@ -61,7 +97,7 @@ export default function Home() {
             <div
               className="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-white @[480px]:rounded-lg min-h-80"
               style={{
-                backgroundImage: 'linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8rCdMfeK0275mUdv9A50Hcrk1-5Wxla5tBuAQqWG8Hju7gE3eO4FuEbE3T_YEd-jHwSXmnwUReQGbxmUB8OUzRsmgpl4-wfCNm2E2nr8kdaE2w1FSniJjxLPd-9uYej3udGjvuu6YxD-xvq5aA1aDnln9R8CcpltYeq848HG9eneZFx1T-zBAFCyRRYict6qBwrWSsEDjIxjtzadLPjewZ_s80is8Dp4FXgLj1NIc-HObgCHAzDbT832b8mh4VjCeDTcJmvNi7TE")'
+                backgroundImage: 'linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url("https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8122_ChatGPT%20Image%20Aug%2013%2C%202025%2C%2007_06_25%20PM.png?alt=media&token=65ada9eb-8403-41ad-bc96-3aa79ad85d47")'
               }}
             >
               <div className="flex justify-center gap-2 p-5">
@@ -124,6 +160,7 @@ export default function Home() {
           </div>
         </div>
 
+              {/*url("https://images.unsplash.com/photo-${1500000000000 + index}?w=200&h=200&fit=crop&crop=face") */}
         {/* Tab Content */}
         {activeTab === "tutors" && (
           <>
@@ -142,9 +179,12 @@ export default function Home() {
                     <div
                       className="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full"
                       style={{
-                        backgroundImage: `url("https://images.unsplash.com/photo-${1500000000000 + index}?w=200&h=200&fit=crop&crop=face")`
+                        backgroundImage: `url("${tutorImages[index % tutorImages.length]}")`
+
+
                       }}
                     ></div>
+                    
                     <div>
                       <p className="text-[#111418] text-base font-medium leading-normal">{tutor.name}</p>
                       <p className="text-[#60748a] text-sm font-normal leading-normal">{tutor.subject} Tutor</p>
@@ -165,6 +205,7 @@ export default function Home() {
             <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               <div className="flex items-stretch p-4 gap-3">
                 {events.slice(0, 4).map((event, index) => (
+                  
                   <div 
                     key={event.id} 
                     className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 cursor-pointer hover:transform hover:scale-105 transition-transform"
@@ -172,9 +213,9 @@ export default function Home() {
                     data-testid={`card-featured-event-${event.id}`}
                   >
                     <div
-                      className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                      className="w-full aspect-video bg-center bg-no-repeat bg-cover rounded-lg flex flex-col"
                       style={{
-                        backgroundImage: `url("https://images.unsplash.com/photo-${1600000000000 + index}?w=400&h=225&fit=crop")`
+                        backgroundImage: `url("${FeaturedEventImage[index % FeaturedEventImage.length]}")`
                       }}
                     ></div>
                     <p className="text-[#111418] text-base font-medium leading-normal">{event.name}</p>
@@ -202,7 +243,7 @@ export default function Home() {
                     <div
                       className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
                       style={{
-                        backgroundImage: `url("https://images.unsplash.com/photo-${1700000000000 + index}?w=400&h=225&fit=crop")`
+                        backgroundImage: `url("${PopularCoursesImage[index % PopularCoursesImage.length]}")`
                       }}
                     ></div>
                     <p className="text-[#111418] text-base font-medium leading-normal">{course.name}</p>
@@ -230,7 +271,7 @@ export default function Home() {
                     <div
                       className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
                       style={{
-                        backgroundImage: `url("https://images.unsplash.com/photo-${1800000000000 + index}?w=400&h=225&fit=crop")`
+                        backgroundImage: `url("${workShopImages[index % workShopImages.length]}")`
                       }}
                     ></div>
                     <p className="text-[#111418] text-base font-medium leading-normal">{workshop.name}</p>
@@ -257,7 +298,7 @@ export default function Home() {
                 <div
                   className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
                   style={{
-                    backgroundImage: `url("https://images.unsplash.com/photo-${1600000000000 + index}?w=400&h=225&fit=crop")`
+                    backgroundImage: `url("${FeaturedEventImage[index % FeaturedEventImage.length]}")`
                   }}
                 ></div>
                 <p className="text-[#111418] text-base font-medium leading-normal">{event.name}</p>
@@ -281,7 +322,7 @@ export default function Home() {
                 <div
                   className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
                   style={{
-                    backgroundImage: `url("https://images.unsplash.com/photo-${1700000000000 + index}?w=400&h=225&fit=crop")`
+                    backgroundImage: `url("${PopularCoursesImage[index % PopularCoursesImage.length]}")`
                   }}
                 ></div>
                 <p className="text-[#111418] text-base font-medium leading-normal">{course.name}</p>
@@ -305,7 +346,7 @@ export default function Home() {
                 <div
                   className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
                   style={{
-                    backgroundImage: `url("https://images.unsplash.com/photo-${1800000000000 + index}?w=400&h=225&fit=crop")`
+                    backgroundImage: `url("${workShopImages[index % workShopImages.length]}")`
                   }}
                 ></div>
                 <p className="text-[#111418] text-base font-medium leading-normal">{workshop.name}</p>

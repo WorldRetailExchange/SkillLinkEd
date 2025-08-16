@@ -2,12 +2,27 @@ import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { type Event } from "@shared/schema";
 
+
+
+
 import DetailModal from "@/components/DetailModal";
+
+const FeaturedEventImage = [
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4583_unnamed%20(1).png?alt=media&token=a38009f9-98f4-4e85-a6ea-bff91ec32777",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8639_unnamed%20(15).png?alt=media&token=469cba93-5ac3-415d-a862-45ec11a14103",  
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F2634_unnamed%20(7).png?alt=media&token=8cfa85e6-d037-4b29-bb0b-b6053bd85d1e",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F7910_unnamed%20(16).png?alt=media&token=41887db0-31a3-4429-b245-baa36488270f",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8077_unnamed%20(18).png?alt=media&token=d7a5c35a-f84b-4774-95d0-8712f50d7f57",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3074_unnamed%20(17).png?alt=media&token=0a93a364-dffe-4f74-968f-c50c323ff4f9"
+];
 
 export default function Events() {
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+
+  
+
 
   const { data: events = [], isLoading } = useQuery<Event[]>({
     queryKey: ["/api/events"],
@@ -40,6 +55,7 @@ export default function Events() {
             <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
               <p className="text-[#111418] text-sm font-medium leading-normal">Education Events</p>
               <div className="text-[#111418] group-open:rotate-180">
+                
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                   <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
                 </svg>
@@ -146,7 +162,7 @@ export default function Events() {
               <div
                 className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
                 style={{
-                  backgroundImage: `url("https://images.unsplash.com/photo-${1600000000000 + index}?w=400&h=225&fit=crop")`
+                  backgroundImage: `url("${FeaturedEventImage[index % FeaturedEventImage.length]}")`
                 }}
               ></div>
               <div>

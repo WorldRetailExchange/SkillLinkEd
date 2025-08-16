@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "wouter";
+import { Link, useLocation } from "wouter"; // ✅ already using wouter
 import { Search, Bell } from "lucide-react";
 import SearchInput from "@/components/SearchInput";
 import Footer from "@/components/Footer";
@@ -9,17 +9,28 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation(); // ✅ added setLocation
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const isHomePage = location === "/";
+
+  const handleProfileClick = () => {
+    if (!isLoggedIn) {
+      // redirect to profile page if not logged in
+      setLocation("/profile");
+    }
+  };
 
   return (
     <div className="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden font-jakarta">
       {/* Header */}
       <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
         <div className="flex items-center gap-8">
-          <Link href="/" className="flex items-center gap-4 text-[#111418] hover:opacity-80 transition-opacity" data-testid="link-home">
+          <Link
+            href="/"
+            className="flex items-center gap-4 text-[#111418] hover:opacity-80 transition-opacity"
+            data-testid="link-home"
+          >
             <div className="size-4">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -73,7 +84,7 @@ export default function Layout({ children }: LayoutProps) {
         </div>
         <div className="flex flex-1 justify-end gap-8">
           <SearchInput placeholder="Search" className="min-w-40 max-w-64" />
-          
+
           {isHomePage && !isLoggedIn ? (
             <div className="flex gap-2" data-testid="auth-buttons">
               <button
@@ -100,6 +111,7 @@ export default function Layout({ children }: LayoutProps) {
                 <Bell size={20} />
               </button>
               <div
+                onClick={handleProfileClick} // ✅ added click handler
                 className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 cursor-pointer hover:ring-2 hover:ring-[#0d78f2] transition-all"
                 style={{
                   backgroundImage: `url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=40&h=40")`,
@@ -113,7 +125,7 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Main Content */}
       <div className="flex-1">{children}</div>
-      
+
       {/* Footer */}
       <Footer />
     </div>

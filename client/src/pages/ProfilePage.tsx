@@ -1,0 +1,310 @@
+import React from "react";
+
+export default function ProfilePage() {
+  return (
+    <div
+      className="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+      style={{ fontFamily: '"Public Sans", "Noto Sans", sans-serif' }}
+    >
+      <div className="layout-container flex h-full grow flex-col">
+        {/* Header */}
+        {/* <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-4 text-[#111418]">
+              <div className="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">
+                SkillLink
+              </h2>
+            </div>
+            <div className="flex items-center gap-9">
+              <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
+                Events
+              </a>
+              <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
+                Courses
+              </a>
+              <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
+                Workshops
+              </a>
+              <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
+                Bootcamps
+              </a>
+              <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
+                Tutors
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-1 justify-end gap-8">
+            <label className="flex flex-col min-w-40 !h-10 max-w-64">
+              <div className="flex w-full flex-1 items-stretch rounded h-full">
+                <div className="text-[#60748a] flex border-none bg-[#f0f2f5] items-center justify-center pl-4 rounded-l border-r-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-full placeholder:text-[#60748a] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                />
+              </div>
+            </label>
+            <div
+              className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style={{
+                backgroundImage:
+                  'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhCz4Afs1HKkqtmjAYjW3H_215mQdcc4btSoU4icyXjj-lpzF0F39zF26xs-lTG9TIYfpeL9YGHkPTSwABrkhmvhnx6KjaeDuEBOMpSRZLq4MqmmCeQtDPD61dYKmFutJPpqxRZRHyaUDdYrAX4OjhSdVq0SFVd0eI6yENQ64cN_3EDIot4c1jfkH-WprJkmLMP7qwEH7Y7EVT4sYQ0BnBtUCJS0tSAYtCwMmkyXs_0cs81qOCT6lSa9ZujMITpbIZ3Lv2efxffMs")',
+              }}
+            ></div>
+          </div>
+        </header> */}
+
+        {/* Main two-column layout */}
+        <div className="gap-1 px-6 flex flex-1 justify-center py-5">
+          {/* Left column: profile + education */}
+          <div className="layout-content-container flex flex-col w-80">
+            <div className="flex p-4 @container">
+              <div className="flex w-full flex-col gap-4 items-center">
+                <div className="flex gap-4 flex-col items-center">
+                  <div
+                    className="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+                    style={{
+                      backgroundImage:
+                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuG2Pk4etvj8FbQangzZC020jrH0OGd4Xkytu-7-9SLTpR9XXR5o3j9ociZwjVPpFBvBY7zlpW-ySFhygIRuJc8y9hJa82Y1cGRgPi5GR1bKnXThWV00N11EcVthOFzxggz7IcSY3nA5oiLNk-JjGnvR8rsEcVTiHpxSzZmvNRMbeplwA9f0IgE_2_JPnuFhAqgiBtXMZUrgI9iy0ZWApdpGOcOWtFo1w5EPLw4Ze22gXvYtlEjA4Y_-v1D-5CmB-TF0DZNGcdEFk")',
+                    }}
+                  ></div>
+                  <div className="flex flex-col items-center justify-center justify-center">
+                    <p className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">
+                      Sophia Bennett
+                    </p>
+                    <p className="text-[#60748a] text-base font-normal leading-normal text-center">
+                      Student at Crestwood High School
+                    </p>
+                    <p className="text-[#60748a] text-base font-normal leading-normal text-center">
+                      Joined SkillLink in 2022
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
+              Education
+            </h3>
+            <div className="p-4 grid grid-cols-[20%_1fr] gap-x-6">
+              <div className="col-span-2 grid grid-cols-subgrid border-t border-t-[#dbe0e6] py-5">
+                <p className="text-[#60748a] text-sm font-normal leading-normal">School</p>
+                <p className="text-[#111418] text-sm font-normal leading-normal">
+                  Crestwood High School
+                </p>
+              </div>
+              <div className="col-span-2 grid grid-cols-subgrid border-t border-t-[#dbe0e6] py-5">
+                <p className="text-[#60748a] text-sm font-normal leading-normal">Grade</p>
+                <p className="text-[#111418] text-sm font-normal leading-normal">11th</p>
+              </div>
+              <div className="col-span-2 grid grid-cols-subgrid border-t border-t-[#dbe0e6] py-5">
+                <p className="text-[#60748a] text-sm font-normal leading-normal">Major</p>
+                <p className="text-[#111418] text-sm font-normal leading-normal">
+                  Computer Science
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right column: subjects, achievements, projects, stats, engagement */}
+          <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
+            {/* Subjects */}
+            <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+              Subjects
+            </h2>
+            <div className="flex gap-3 p-3 flex-wrap pr-4">
+              <div className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded bg-[#f0f2f5] pl-2 pr-4">
+                <div className="text-[#111418]" data-icon="Calculator" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M80,120h96a8,8,0,0,0,8-8V64a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8v48A8,8,0,0,0,80,120Zm8-48h80v32H88ZM200,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V40A16,16,0,0,0,200,24Zm0,192H56V40H200ZM100,148a12,12,0,1,1-12-12A12,12,0,0,1,100,148Zm40,0a12,12,0,1,1-12-12A12,12,0,0,1,140,148Zm40,0a12,12,0,1,1-12-12A12,12,0,0,1,180,148Zm-80,40a12,12,0,1,1-12-12A12,12,0,0,1,100,188Zm40,0a12,12,0,1,1-12-12A12,12,0,0,1,140,188Zm40,0a12,12,0,1,1-12-12A12,12,0,0,1,180,188Z"></path>
+                  </svg>
+                </div>
+                <p className="text-[#111418] text-sm font-medium leading-normal">Mathematics</p>
+              </div>
+
+              <div className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded bg-[#f0f2f5] pl-2 pr-4">
+                <div className="text-[#111418]" data-icon="Atom" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M196.12,128c24.65-34.61,37.22-70.38,19.74-87.86S162.61,35.23,128,59.88C93.39,35.23,57.62,22.66,40.14,40.14S35.23,93.39,59.88,128c-24.65,34.61-37.22,70.38-19.74,87.86h0c5.63,5.63,13.15,8.14,21.91,8.14,18.48,0,42.48-11.17,66-27.88C151.47,212.83,175.47,224,194,224c8.76,0,16.29-2.52,21.91-8.14h0C233.34,198.38,220.77,162.61,196.12,128Zm8.43-76.55c7.64,7.64,2.48,32.4-18.52,63.28a300.33,300.33,0,0,0-21.19-23.57A300.33,300.33,0,0,0,141.27,70C172.15,49,196.91,43.8,204.55,51.45ZM176.29,128a289.14,289.14,0,0,1-22.76,25.53A289.14,289.14,0,0,1,128,176.29a289.14,289.14,0,0,1-25.53-22.76A289.14,289.14,0,0,1,79.71,128,298.62,298.62,0,0,1,128,79.71a289.14,289.14,0,0,1,25.53,22.76A289.14,289.14,0,0,1,176.29,128ZM51.45,51.45c2.2-2.21,5.83-3.35,10.62-3.35C73.89,48.1,92.76,55,114.72,70A304,304,0,0,0,91.16,91.16,300.33,300.33,0,0,0,70,114.73C49,83.85,43.81,59.09,51.45,51.45Zm0,153.1C43.81,196.91,49,172.15,70,141.27a300.33,300.33,0,0,0,21.19,23.57A304.18,304.18,0,0,0,114.73,186C83.85,207,59.09,212.2,51.45,204.55Zm153.1,0c-7.64,7.65-32.4,2.48-63.28-18.52a304.18,304.18,0,0,0,23.57-21.19A300.33,300.33,0,0,0,186,141.27C207,172.15,212.19,196.91,204.55,204.55ZM140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128Z"></path>
+                  </svg>
+                </div>
+                <p className="text-[#111418] text-sm font-medium leading-normal">Physics</p>
+              </div>
+
+              <div className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded bg-[#f0f2f5] pl-2 pr-4">
+                <div className="text-[#111418]" data-icon="Code" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"></path>
+                  </svg>
+                </div>
+                <p className="text-[#111418] text-sm font-medium leading-normal">Computer Science</p>
+              </div>
+
+              <div className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded bg-[#f0f2f5] pl-2 pr-4">
+                <div className="text-[#111418]" data-icon="Flask" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M221.69,199.77,160,96.92V40h8a8,8,0,0,0,0-16H88a8,8,0,0,0,0,16h8V96.92L34.31,199.77A16,16,0,0,0,48,224H208a16,16,0,0,0,13.72-24.23ZM110.86,103.25A7.93,7.93,0,0,0,112,99.14V40h32V99.14a7.93,7.93,0,0,0,1.14,4.11L183.36,167c-12,2.37-29.07,1.37-51.75-10.11-15.91-8.05-31.05-12.32-45.22-12.81ZM48,208l28.54-47.58c14.25-1.74,30.31,1.85,47.82,10.72,19,9.61,35,12.88,48,12.88a69.89,69.89,0,0,0,19.55-2.7L208,208Z"></path>
+                  </svg>
+                </div>
+                <p className="text-[#111418] text-sm font-medium leading-normal">Chemistry</p>
+              </div>
+
+              <div className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded bg-[#f0f2f5] pl-2 pr-4">
+                <div className="text-[#111418]" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                  </svg>
+                </div>
+                <p className="text-[#111418] text-sm font-medium leading-normal">Biology</p>
+              </div>
+            </div>
+
+            {/* Achievements */}
+            <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+              Achievements
+            </h2>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div className="flex flex-col gap-3 pb-3">
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                  style={{
+                    backgroundImage:
+                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuARv9COJqM0wJQKPCVXnyCPQAkeRmmOvg8cC10vttwnC6Qoug7FNmiqVLw0x4MyG2driutLiP2oYrEeFy39nG-gW7iYDduY6Mdtk4CwLV0CJb8NO8GYn0haSJC4wrEys3tFRU8E8M1XfJjATppyanHsh3hzKZRMNCILnnjD3wlxS2Lkn1YEy0cIdijiBOQ7FxrIf-035IbL0gBIvYnd-xUhKL86nb99YjcpW7c3bSqY-JbA9gxPCO6sZcaNOitWxExWPe7atoX38Q8")',
+                  }}
+                ></div>
+                <p className="text-[#111418] text-base font-medium leading-normal">
+                  Completed 5 Courses
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 pb-3">
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                  style={{
+                    backgroundImage:
+                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_8SP3JevxxqQHxRqqGMdYnmdXkGLTqblmVHuaDKOe1uPPZCwqK_pGKBy47m_AAVerr5yXUhdl7e_8ifgfjQNi5gJIkaQAhTb6mPkRCZQxAECkykAs_CcRkBRgtUP1wURpOK1Pzj3KveAwoUHOnc49u_noLQFpPzNLqpDdHKUZdxv_Yfs6-keNDQATTdknlulTTq4Kzr3iS8X4NBRABSr5tS2KQf-sppI5TODGKhb5rsxrCpyRVgFqnFyFEzAon2aInoH6yCn9OYg")',
+                  }}
+                ></div>
+                <p className="text-[#111418] text-base font-medium leading-normal">
+                  Attended 10 Events
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 pb-3">
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                  style={{
+                    backgroundImage:
+                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzn1voIGZNPtdi_9JExN-CXx_332cQaQ3YyJGJMfi-rW_t_UWoNtJIg0ZDKUPCWGZ3HpQfvhrLf_NrxfxY3oLqWq3oJnDgtfQujsSWr4_fduiwTpuZZ3mFNI2DHpH_zxvUNSJRSa1k10TUM89HuRo_DDBtBuRxOZnd8XMaM6GuKO6P-AlbrbFQWpK201tPV9Zl5UYs2IUdxe8_61txgsXIGVBSTlng35Vc4Yv_k1G-MUEur-v0BTwzBZ3lylLN4bubXcQ4xbkVUPM")',
+                  }}
+                ></div>
+                <p className="text-[#111418] text-base font-medium leading-normal">
+                  Mentored 5 Students
+                </p>
+              </div>
+            </div>
+
+            {/* Projects */}
+            <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+              Projects
+            </h2>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div className="flex flex-1 gap-3 rounded border border-[#dbe0e6] bg-white p-4 flex-col">
+                <div className="text-[#111418]" data-icon="ArrowRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+                  </svg>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h2 className="text-[#111418] text-base font-bold leading-tight">
+                    Hotel Booking Website
+                  </h2>
+                  <p className="text-[#60748a] text-sm font-normal leading-normal">View Project</p>
+                </div>
+              </div>
+              <div className="flex flex-1 gap-3 rounded border border-[#dbe0e6] bg-white p-4 flex-col">
+                <div className="flex flex-col gap-1">
+                  <h2 className="text-[#111418] text-base font-bold leading-tight">
+                    Google Cloud Project
+                  </h2>
+                  <p className="text-[#60748a] text-sm font-normal leading-normal">View Project</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Activity Stats */}
+            <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+              Activity Stats
+            </h2>
+            <div className="flex flex-wrap gap-4 p-4">
+              <div className="flex min-w-[158px] flex-1 flex-col gap-2 rounded p-6 bg-[#f0f2f5]">
+                <p className="text-[#111418] text-base font-medium leading-normal">Courses Completed</p>
+                <p className="text-[#111418] tracking-light text-2xl font-bold leading-tight">5</p>
+              </div>
+              <div className="flex min-w-[158px] flex-1 flex-col gap-2 rounded p-6 bg-[#f0f2f5]">
+                <p className="text-[#111418] text-base font-medium leading-normal">Events Attended</p>
+                <p className="text-[#111418] tracking-light text-2xl font-bold leading-tight">10</p>
+              </div>
+              <div className="flex min-w-[158px] flex-1 flex-col gap-2 rounded p-6 bg-[#f0f2f5]">
+                <p className="text-[#111418] text-base font-medium leading-normal">Students Mentored</p>
+                <p className="text-[#111418] tracking-light text-2xl font-bold leading-tight">5</p>
+              </div>
+            </div>
+
+            {/* Engagement */}
+            <h2 className="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+              Engagement
+            </h2>
+            <div className="flex flex-wrap gap-4 px-4 py-6">
+              <div className="flex min-w-72 flex-1 flex-col gap-2">
+                <p className="text-[#111418] text-base font-medium leading-normal">SkillLink Activity</p>
+                <p className="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">120</p>
+                <div className="flex gap-1">
+                  <p className="text-[#60748a] text-base font-normal leading-normal">Last 6 Months</p>
+                  <p className="text-[#07883b] text-base font-medium leading-normal">+15%</p>
+                </div>
+                <div className="grid min-h-[180px] grid-flow-col gap-6 grid-rows-[1fr_auto] items-end justify-items-center px-3">
+                  <div className="border-[#60748a] bg-[#f0f2f5] border-t-2 w-full" style={{ height: "100%" }}></div>
+                  <p className="text-[#60748a] text-[13px] font-bold leading-normal tracking-[0.015em]">Jan</p>
+
+                  <div className="border-[#60748a] bg-[#f0f2f5] border-t-2 w-full" style={{ height: "90%" }}></div>
+                  <p className="text-[#60748a] text-[13px] font-bold leading-normal tracking-[0.015em]">Feb</p>
+
+                  <div className="border-[#60748a] bg-[#f0f2f5] border-t-2 w-full" style={{ height: "70%" }}></div>
+                  <p className="text-[#60748a] text-[13px] font-bold leading-normal tracking-[0.015em]">Mar</p>
+
+                  <div className="border-[#60748a] bg-[#f0f2f5] border-t-2 w-full" style={{ height: "70%" }}></div>
+                  <p className="text-[#60748a] text-[13px] font-bold leading-normal tracking-[0.015em]">Apr</p>
+
+                  <div className="border-[#60748a] bg-[#f0f2f5] border-t-2 w-full" style={{ height: "30%" }}></div>
+                  <p className="text-[#60748a] text-[13px] font-bold leading-normal tracking-[0.015em]">May</p>
+
+                  <div className="border-[#60748a] bg-[#f0f2f5] border-t-2 w-full" style={{ height: "10%" }}></div>
+                  <p className="text-[#60748a] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* End right column */}
+        </div>
+      </div>
+    </div>
+  );
+}

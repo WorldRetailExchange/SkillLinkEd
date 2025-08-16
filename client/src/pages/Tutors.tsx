@@ -4,6 +4,14 @@ import { type Tutor } from "@shared/schema";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import DetailModal from "@/components/DetailModal";
 
+const tutorImages = [
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F7972_bigtutor2.webp?alt=media&token=96eef663-5866-4f63-b141-61d74b12c846",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9326_indian-teacher-guy-filming-educational-video-lecture-online-blog-standing-near-blackboard-indoors-virtual-tutoring-e-teaching-209297771.jpg?alt=media&token=4980890d-f8e0-4e67-b90f-60dfa0dde4b7",  
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4277_smiling-professional-indian-female-teacher-remote-tutor-looking-webcam-speaking-giving-online-class-video-conference-call-191073519.jpg?alt=media&token=7935ac6a-803a-4f56-bb14-f85901eea07e",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9969_young-indian-female-school-teacher-smiling-warmly-embracing-diversity-and-inspiring-students-classroom-setting-photo.jpg?alt=media&token=abd5f110-f230-4a6a-8853-22abd936bf7e",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9492_gettyimages-82796173-612x612.jpg?alt=media&token=0377a744-24e4-4dd2-9078-bd4638feb8d4"
+];
+
 export default function Tutors() {
   const [selectedTutor, setSelectedTutor] = useState<Tutor | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -119,7 +127,7 @@ export default function Tutors() {
                 <div
                   className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
                   style={{
-                    backgroundImage: `url("https://images.unsplash.com/photo-${1500000000000 + index}?w=200&h=200&fit=crop&crop=face")`
+                    backgroundImage: `url("${tutorImages[index % tutorImages.length]}")`
                   }}
                 ></div>
                 <div>
@@ -157,7 +165,7 @@ export default function Tutors() {
               <div
                 className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
                 style={{
-                  backgroundImage: `url("https://images.unsplash.com/photo-${1500000000000 + index + 100}?w=300&h=169&fit=crop&crop=face")`
+                  backgroundImage: `url("${tutorImages[index % tutorImages.length]}")`
                 }}
               ></div>
             </div>

@@ -10,6 +10,7 @@ import Courses from "@/pages/Courses";
 import Tutors from "@/pages/Tutors";
 import Workshops from "@/pages/Workshops";
 import NotFound from "@/pages/not-found";
+import ProfilePage from "@/pages/ProfilePage";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
         <Route path="/courses" component={Courses} />
         <Route path="/tutors" component={Tutors} />
         <Route path="/workshops" component={Workshops} />
+         <Route path="/profile" component={ProfilePage} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
