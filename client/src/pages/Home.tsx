@@ -21,24 +21,24 @@ const tutorImages = [
 ];
 
 const FeaturedEventImage = [
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4583_unnamed%20(1).png?alt=media&token=a38009f9-98f4-4e85-a6ea-bff91ec32777",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9158_unnamed%20(2).png?alt=media&token=1b27daf9-5be3-4799-bf96-dbf241d8d7e5",  
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F2443_unnamed%20(3).png?alt=media&token=92f29b7e-3f0b-41b6-b572-ecf76e4d52ff",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9437_unnamed%20(4).png?alt=media&token=9ec273fa-bbef-4201-a625-f1875b8578dd",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F5577_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_02_30%20PM.png?alt=media&token=24fb7116-250d-4879-ad3e-ce889344f708",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8639_unnamed%20(15).png?alt=media&token=469cba93-5ac3-415d-a862-45ec11a14103",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F6274_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_11_43%20PM.png?alt=media&token=35e59038-0642-42b6-89bc-4e6be412d6c5",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F7910_unnamed%20(16).png?alt=media&token=41887db0-31a3-4429-b245-baa36488270f",
 ];
 
 const PopularCoursesImage = [
   "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8743_unnamed%20(5).png?alt=media&token=8f0f28b1-963b-4881-b525-f9fc93102b13",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F5155_unnamed%20(6).png?alt=media&token=059400cf-70ed-4e16-b502-5874d6edcc2b",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F2634_unnamed%20(7).png?alt=media&token=8cfa85e6-d037-4b29-bb0b-b6053bd85d1e",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9580_unnamed%20(8).png?alt=media&token=05225f80-b1a1-43e1-859b-05cf55b2aeb9"
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3592_sketch-physics_156892-594.avif?alt=media&token=1966c2f8-bd26-41af-b089-91999b5b4def",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4415_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_16_46%20PM.png?alt=media&token=0a3e8290-6066-439f-95ea-d5c4dbff6a5a",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3382_Data%20Science%20Bootcamp%20(1).jpg?alt=media&token=ae6c4a03-c6c6-4264-87a7-fe40bc8a7bc9"
 ];
 
 const workShopImages = [
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4564_unnamed%20(9).png?alt=media&token=c281ad32-0fa3-415c-8f74-2d7ec23173ce",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9091_unnamed%20(10).png?alt=media&token=79fb7e65-d4d4-4269-ab26-8a1eb51bc536",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3853_unnamed%20(11).png?alt=media&token=082c6957-fc0b-41c6-b65f-68e8ceaab24e",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4322_unnamed%20(12).png?alt=media&token=9365172b-00ca-4a0a-b7a7-6bd2b094d8ad"
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F5208_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_24_05%20PM.png?alt=media&token=6a95c49a-5000-4f92-96d1-fb62275000f2",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F244_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_31_03%20PM.png?alt=media&token=17288ee4-d5b5-4b8e-9b4c-2ea6f3548879",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4455_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_39_28%20PM.png?alt=media&token=23e430a2-e68d-460f-9cc2-6a687b1da44e",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3520_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_36_08%20PM.png?alt=media&token=6b60c2fc-cfce-4ebf-9414-6b5f23e8e0c3"
 ]
 
 export default function Home() {

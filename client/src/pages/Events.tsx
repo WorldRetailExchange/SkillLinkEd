@@ -8,9 +8,9 @@ import { type Event } from "@shared/schema";
 import DetailModal from "@/components/DetailModal";
 
 const FeaturedEventImage = [
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4583_unnamed%20(1).png?alt=media&token=a38009f9-98f4-4e85-a6ea-bff91ec32777",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F5577_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_02_30%20PM.png?alt=media&token=24fb7116-250d-4879-ad3e-ce889344f708",
   "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8639_unnamed%20(15).png?alt=media&token=469cba93-5ac3-415d-a862-45ec11a14103",  
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F2634_unnamed%20(7).png?alt=media&token=8cfa85e6-d037-4b29-bb0b-b6053bd85d1e",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F6274_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_11_43%20PM.png?alt=media&token=35e59038-0642-42b6-89bc-4e6be412d6c5",
   "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F7910_unnamed%20(16).png?alt=media&token=41887db0-31a3-4429-b245-baa36488270f",
   "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8077_unnamed%20(18).png?alt=media&token=d7a5c35a-f84b-4774-95d0-8712f50d7f57",
   "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3074_unnamed%20(17).png?alt=media&token=0a93a364-dffe-4f74-968f-c50c323ff4f9"

@@ -6,9 +6,9 @@ import DetailModal from "@/components/DetailModal";
 
 const PopularCoursesImage = [
   "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8743_unnamed%20(5).png?alt=media&token=8f0f28b1-963b-4881-b525-f9fc93102b13",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F5155_unnamed%20(6).png?alt=media&token=059400cf-70ed-4e16-b502-5874d6edcc2b",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F2634_unnamed%20(7).png?alt=media&token=8cfa85e6-d037-4b29-bb0b-b6053bd85d1e",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9580_unnamed%20(8).png?alt=media&token=05225f80-b1a1-43e1-859b-05cf55b2aeb9"
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3592_sketch-physics_156892-594.avif?alt=media&token=1966c2f8-bd26-41af-b089-91999b5b4def",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4415_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_16_46%20PM.png?alt=media&token=0a3e8290-6066-439f-95ea-d5c4dbff6a5a",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3382_Data%20Science%20Bootcamp%20(1).jpg?alt=media&token=ae6c4a03-c6c6-4264-87a7-fe40bc8a7bc9"
 ];
 
 export default function Courses() {

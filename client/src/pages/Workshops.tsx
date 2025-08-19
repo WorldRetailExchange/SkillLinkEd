@@ -5,10 +5,10 @@ import { type Workshop } from "@shared/schema";
 import DetailModal from "@/components/DetailModal";
 
 const workShopImages = [
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8743_unnamed%20(5).png?alt=media&token=8f0f28b1-963b-4881-b525-f9fc93102b13",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4847_unnamed%20(19).png?alt=media&token=5a5d0196-dce3-45ac-a02c-6c89414d3bbb",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F7910_unnamed%20(16).png?alt=media&token=41887db0-31a3-4429-b245-baa36488270f",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4322_unnamed%20(12).png?alt=media&token=9365172b-00ca-4a0a-b7a7-6bd2b094d8ad"
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F5208_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_24_05%20PM.png?alt=media&token=6a95c49a-5000-4f92-96d1-fb62275000f2",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F244_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_31_03%20PM.png?alt=media&token=17288ee4-d5b5-4b8e-9b4c-2ea6f3548879",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4455_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_39_28%20PM.png?alt=media&token=23e430a2-e68d-460f-9cc2-6a687b1da44e",
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3520_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_36_08%20PM.png?alt=media&token=6b60c2fc-cfce-4ebf-9414-6b5f23e8e0c3"
 ];
 
 export default function Workshops() {
