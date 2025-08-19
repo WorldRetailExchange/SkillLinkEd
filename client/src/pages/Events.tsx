@@ -13,7 +13,7 @@ const FeaturedEventImage = [
   "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F6274_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2001_11_43%20PM.png?alt=media&token=35e59038-0642-42b6-89bc-4e6be412d6c5",
   "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F7910_unnamed%20(16).png?alt=media&token=41887db0-31a3-4429-b245-baa36488270f",
   "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F8077_unnamed%20(18).png?alt=media&token=d7a5c35a-f84b-4774-95d0-8712f50d7f57",
-  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F3074_unnamed%20(17).png?alt=media&token=0a93a364-dffe-4f74-968f-c50c323ff4f9"
+  "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F7319_ChatGPT%20Image%20Aug%2019%2C%202025%2C%2002_15_07%20PM.png?alt=media&token=dbfac5aa-8f88-4057-a629-b2766745c5ef"
 ];
 
 export default function Events() {
