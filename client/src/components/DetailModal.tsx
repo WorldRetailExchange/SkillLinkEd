@@ -53,7 +53,7 @@ export default function DetailModal({ isOpen, onClose, item, type }: DetailModal
         </div>
         <div className="flex gap-4 pt-4">
           <button className="flex-1 bg-[#0d78f2] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#0c6bd9] transition-colors" data-testid="button-contact">
-            Contact Tutor
+            Book Slots
           </button>
           <button className="flex-1 bg-[#f0f2f5] text-[#111418] px-6 py-3 rounded-lg font-semibold hover:bg-[#e8ecf0] transition-colors" data-testid="button-trial">
             Schedule Trial
