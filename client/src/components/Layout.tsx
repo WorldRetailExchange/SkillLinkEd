@@ -9,16 +9,14 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const [location, setLocation] = useLocation(); // ✅ added setLocation
+  const [location, setLocation] = useLocation();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const isHomePage = location === "/";
 
+  // ✅ Updated logic: Always redirect to profile on avatar click
   const handleProfileClick = () => {
-    if (!isLoggedIn) {
-      // redirect to profile page if not logged in
-      setLocation("/profile");
-    }
+    setLocation("/profile");
   };
 
   return (
@@ -32,7 +30,11 @@ export default function Layout({ children }: LayoutProps) {
             data-testid="link-home"
           >
             <div className="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -41,7 +43,9 @@ export default function Layout({ children }: LayoutProps) {
                 />
               </svg>
             </div>
-            <h2 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">SkillLink</h2>
+            <h2 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">
+              SkillLink
+            </h2>
           </Link>
           <nav className="flex items-center gap-9">
             <Link
@@ -111,7 +115,7 @@ export default function Layout({ children }: LayoutProps) {
                 <Bell size={20} />
               </button>
               <div
-                onClick={handleProfileClick} // ✅ added click handler
+                onClick={handleProfileClick} // ✅ always redirects now
                 className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 cursor-pointer hover:ring-2 hover:ring-[#0d78f2] transition-all"
                 style={{
                   backgroundImage: `url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=40&h=40")`,

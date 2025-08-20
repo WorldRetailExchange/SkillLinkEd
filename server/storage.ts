@@ -49,7 +49,7 @@ export class MemStorage implements IStorage {
         price: "400₹/hr",
         availability: "Monday-Friday, 3PM-8PM",
         location: "Online and New Delhi",
-        description: "Ava is a highly experienced mathematics tutor specializing in Algebra, Calculus, and Statistics. She has helped over 200 students improve their math skills and achieve their academic goals.",
+        description: "Anurag Singh is a highly experienced mathematics tutor specializing in Algebra, Calculus, and Statistics. She has helped over 200 students improve their math skills and achieve their academic goals.",
         image: "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F7972_bigtutor2.webp?alt=media&token=96eef663-5866-4f63-b141-61d74b12c846"
       },
       {
@@ -61,7 +61,7 @@ export class MemStorage implements IStorage {
         price: "500₹/hr",
         availability: "Tuesday-Saturday, 4PM-9PM",
         location: "Online and Mumbai, Maharashtra",
-        description: "Liam brings extensive knowledge in Physics, Chemistry, and Biology. His hands-on approach and laboratory experience make complex scientific concepts accessible to students.",
+        description: "Abhishek Yadav brings extensive knowledge in Physics, Chemistry, and Biology. His hands-on approach and laboratory experience make complex scientific concepts accessible to students.",
         image: "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9326_indian-teacher-guy-filming-educational-video-lecture-online-blog-standing-near-blackboard-indoors-virtual-tutoring-e-teaching-209297771.jpg?alt=media&token=4980890d-f8e0-4e67-b90f-60dfa0dde4b7"
       },
       {
@@ -73,7 +73,7 @@ export class MemStorage implements IStorage {
         price: "400₹/hr",
         availability: "Monday-Thursday, 5PM-9PM",
         location: "Online and West Bengal",
-        description: "Chloe is passionate about literature and writing. She helps students develop critical thinking skills and express themselves clearly through written and verbal communication.",
+        description: "Jyoti Suri is passionate about literature and writing. She helps students develop critical thinking skills and express themselves clearly through written and verbal communication.",
         image: "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F4277_smiling-professional-indian-female-teacher-remote-tutor-looking-webcam-speaking-giving-online-class-video-conference-call-191073519.jpg?alt=media&token=7935ac6a-803a-4f56-bb14-f85901eea07e"
       },
       {
@@ -85,7 +85,7 @@ export class MemStorage implements IStorage {
         price: "1500₹/hr",
         availability: "Wednesday-Sunday, 2PM-7PM",
         location: "Online and Mumbai, Maharashtra",
-        description: "Owen brings history to life with engaging storytelling and helps students understand the connections between past and present events.",
+        description: "Priyanka Dhage brings history to life with engaging storytelling and helps students understand the connections between past and present events.",
         image: "https://firebasestorage.googleapis.com/v0/b/posible.in/o/10wrx%2F9969_young-indian-female-school-teacher-smiling-warmly-embracing-diversity-and-inspiring-students-classroom-setting-photo.jpg?alt=media&token=abd5f110-f230-4a6a-8853-22abd936bf7e"
       },
       {
