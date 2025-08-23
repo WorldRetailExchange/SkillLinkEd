@@ -94,46 +94,54 @@ const InternationalCourses: React.FC = () => {
           <div className="gap-1 px-6 flex flex-1 justify-center py-5">
             {/* Left filter column */}
             <div className="layout-content-container flex flex-col w-80">
-              <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
-                Filters
-              </h3>
+  <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
+    Filters
+  </h3>
 
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#111418] text-base font-medium leading-normal pb-2">Category</p>
-                  <select className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 bg-[image:--select-button-svg] placeholder:text-[#60748a] p-[15px] text-base font-normal leading-normal">
-                    <option value="one">Select Category</option>
-                    <option value="two">Online</option>
-                    <option value="three">Offline</option>
-                  </select>
-                </label>
-              </div>
+  {/* Category */}
+  <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+    <label className="flex flex-col min-w-40 flex-1 relative">
+      <p className="text-[#111418] text-base font-medium leading-normal pb-2">Category</p>
+      <select className="appearance-none flex w-full min-w-0 flex-1 rounded-xl border border-[#dbe0e6] bg-white text-[#111418] h-14 pl-4 pr-10 text-base font-normal leading-normal focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="">Select Category</option>
+        <option value="online">Online</option>
+        <option value="offline">Offline</option>
+      </select>
+      {/* dropdown arrow */}
+      {/* <span className="absolute right-4 top-11 pointer-events-none text-gray-500">▼</span> */}
+    </label>
+  </div>
 
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#111418] text-base font-medium leading-normal pb-2">Country</p>
-                  <select className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 bg-[image:--select-button-svg] placeholder:text-[#60748a] p-[15px] text-base font-normal leading-normal">
-                    <option value="one">Select Country</option>
-                    <option value="two">London</option>
-                    <option value="three">Japan</option>
-                    <option value="three">Berlin</option>
-                    <option value="three">Hong Kong</option>
-                  </select>
-                </label>
-              </div>
+  {/* Country */}
+  <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+    <label className="flex flex-col min-w-40 flex-1 relative">
+      <p className="text-[#111418] text-base font-medium leading-normal pb-2">Country</p>
+      <select className="appearance-none flex w-full min-w-0 flex-1 rounded-xl border border-[#dbe0e6] bg-white text-[#111418] h-14 pl-4 pr-10 text-base font-normal leading-normal focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="">Select Country</option>
+        <option value="london">London</option>
+        <option value="japan">Japan</option>
+        <option value="berlin">Berlin</option>
+        <option value="hongkong">Hong Kong</option>
+      </select>
+      {/* <span className="absolute right-4 top-11 pointer-events-none text-gray-500">▼</span> */}
+    </label>
+  </div>
 
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#111418] text-base font-medium leading-normal pb-2">Duration</p>
-                  <select className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 bg-[image:--select-button-svg] placeholder:text-[#60748a] p-[15px] text-base font-normal leading-normal">
-                    <option value="one">Select Duration</option>
-                    <option value="two">One Year</option>
-                    <option value="three">Two Year</option>
-                    <option value="three">Three Year</option>
-                  </select>
-                </label>
-              </div>
-            </div>
+  {/* Duration */}
+  <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+    <label className="flex flex-col min-w-40 flex-1 relative">
+      <p className="text-[#111418] text-base font-medium leading-normal pb-2">Duration</p>
+      <select className="appearance-none flex w-full min-w-0 flex-1 rounded-xl border border-[#dbe0e6] bg-white text-[#111418] h-14 pl-4 pr-10 text-base font-normal leading-normal focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="">Select Duration</option>
+        <option value="1year">One Year</option>
+        <option value="2year">Two Year</option>
+        <option value="3year">Three Year</option>
+      </select>
+      {/* <span className="absolute right-4 top-11 pointer-events-none text-gray-500">▼</span> */}
+    </label>
+  </div>
+</div>
+
 
             {/* Right main content */}
             <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
@@ -145,96 +153,6 @@ const InternationalCourses: React.FC = () => {
                   <p className="text-[#60748a] text-sm font-normal leading-normal">
                     Explore courses, study abroad programs, and internships worldwide.
                   </p>
-                </div>
-              </div>
-
-              {/* Courses */}
-              <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
-                Courses
-              </h3>
-              <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-                <div
-                  className="flex flex-col gap-3 pb-3 cursor-pointer"
-                  onClick={() =>
-                    openCard(
-                      "Global Business Strategies",
-                      "Learn to navigate international markets and business practices.",
-                      "https://lh3.googleusercontent.com/aida-public/AB6AXuDBnzkhTbfD6_aRvTxfSPuRimGvXaFWc2Xp9eUGbupYFn5B_yxtAX-7tpT061c6nSiDtcSoZCpE590cP3CdKi9fS34tZkyKP_VgDItHxlBKWOewwPsN6xREwGh1vXSyyPyeaswxzfftIpa_klPKOsRzZVMg3z3vA0DTpq_6wVi7yNjIinZ9cYm4G_c-FksNBhsWnlpkOK-i5H5nwGCsC0cnc8Nu3W5WSMcEc2N3xS_9iUWFSMphG4BCByl9zKwoXAlQjA_K45xCHsU",
-                      "Course"
-                    )
-                  }
-                >
-                  <div
-                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style={{
-                      backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBnzkhTbfD6_aRvTxfSPuRimGvXaFWc2Xp9eUGbupYFn5B_yxtAX-7tpT061c6nSiDtcSoZCpE590cP3CdKi9fS34tZkyKP_VgDItHxlBKWOewwPsN6xREwGh1vXSyyPyeaswxzfftIpa_klPKOsRzZVMg3z3vA0DTpq_6wVi7yNjIinZ9cYm4G_c-FksNBhsWnlpkOK-i5H5nwGCsC0cnc8Nu3W5WSMcEc2N3xS_9iUWFSMphG4BCByl9zKwoXAlQjA_K45xCHsU")',
-                    }}
-                  />
-                  <div>
-                    <p className="text-[#111418] text-base font-medium leading-normal">
-                      Global Business Strategies
-                    </p>
-                    <p className="text-[#60748a] text-sm font-normal leading-normal">
-                      Learn to navigate international markets and business practices.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  className="flex flex-col gap-3 pb-3 cursor-pointer"
-                  onClick={() =>
-                    openCard(
-                      "Cross-Cultural Communication",
-                      "Enhance your communication skills across different cultures.",
-                      "https://lh3.googleusercontent.com/aida-public/AB6AXuBIqchp3EG0AGCAMsmNDbQ3AtK5vPvW8LKLm7b2dWCQ_NhwYGvoeBVdQqZ8LYLOBPrJQqrDFJMc9ap8fgob6I0tBE56my7rRDgBXGPbSt-aiFDUZjhPEtjF3LcAkIj3u2cWFheNIK-tM2uaww3WaFGL5A66HMwKtTXIU5xmqxIeVBLnw8pNNCZVZTXgJsHGnbuQFrTDKjg5loBo7ZIatTU75xc3-oiLRZFTH6oNrq51N22e56m4gzMej1TKytz4cAsWi9wn7lJg3aE",
-                      "Course"
-                    )
-                  }
-                >
-                  <div
-                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style={{
-                      backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIqchp3EG0AGCAMsmNDbQ3AtK5vPvW8LKLm7b2dWCQ_NhwYGvoeBVdQqZ8LYLOBPrJQqrDFJMc9ap8fgob6I0tBE56my7rRDgBXGPbSt-aiFDUZjhPEtjF3LcAkIj3u2cWFheNIK-tM2uaww3WaFGL5A66HMwKtTXIU5xmqxIeVBLnw8pNNCZVZTXgJsHGnbuQFrTDKjg5loBo7ZIatTU75xc3-oiLRZFTH6oNrq51N22e56m4gzMej1TKytz4cAsWi9wn7lJg3aE")',
-                    }}
-                  />
-                  <div>
-                    <p className="text-[#111418] text-base font-medium leading-normal">
-                      Cross-Cultural Communication
-                    </p>
-                    <p className="text-[#60748a] text-sm font-normal leading-normal">
-                      Enhance your communication skills across different cultures.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  className="flex flex-col gap-3 pb-3 cursor-pointer"
-                  onClick={() =>
-                    openCard(
-                      "International Marketing",
-                      "Master marketing strategies for a global audience.",
-                      "https://lh3.googleusercontent.com/aida-public/AB6AXuA9Vhmy-pUTQibA7Oz2tk696aI4BYs-ojgRvWOqQ5PaLUSvWfVIZk7bsNkKmlhJlSI2LPpSdvYMxS9gdYIHU1VruC6-QAulPXGlVEB4_B6kkZnoQCojKgPRS_p5OhC0Pd9LJ9u4s-wHZEENhqAML89ivby-yYGhc5WHP5M2AAd50Roxx2BreubXeyOZTs54mEHSfl8SewBVQyt2vfyPOTLIlJSZIV05bhsQAUx9aYfbc50OOkHL9nBfbq1n-2sCntkPDCJMNUEqzlE",
-                      "Course"
-                    )
-                  }
-                >
-                  <div
-                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style={{
-                      backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9Vhmy-pUTQibA7Oz2tk696aI4BYs-ojgRvWOqQ5PaLUSvWfVIZk7bsNkKmlhJlSI2LPpSdvYMxS9gdYIHU1VruC6-QAulPXGlVEB4_B6kkZnoQCojKgPRS_p5OhC0Pd9LJ9u4s-wHZEENhqAML89ivby-yYGhc5WHP5M2AAd50Roxx2BreubXeyOZTs54mEHSfl8SewBVQyt2vfyPOTLIlJSZIV05bhsQAUx9aYfbc50OOkHL9nBfbq1n-2sCntkPDCJMNUEqzlE")',
-                    }}
-                  />
-                  <div>
-                    <p className="text-[#111418] text-base font-medium leading-normal">
-                      International Marketing
-                    </p>
-                    <p className="text-[#60748a] text-sm font-normal leading-normal">
-                      Master marketing strategies for a global audience.
-                    </p>
-                  </div>
                 </div>
               </div>
 
@@ -327,6 +245,97 @@ const InternationalCourses: React.FC = () => {
                   </div>
                 </div>
               </div>
+
+                            {/* Courses */}
+              <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
+                Courses
+              </h3>
+              <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                <div
+                  className="flex flex-col gap-3 pb-3 cursor-pointer"
+                  onClick={() =>
+                    openCard(
+                      "Global Business Strategies",
+                      "Learn to navigate international markets and business practices.",
+                      "https://lh3.googleusercontent.com/aida-public/AB6AXuDBnzkhTbfD6_aRvTxfSPuRimGvXaFWc2Xp9eUGbupYFn5B_yxtAX-7tpT061c6nSiDtcSoZCpE590cP3CdKi9fS34tZkyKP_VgDItHxlBKWOewwPsN6xREwGh1vXSyyPyeaswxzfftIpa_klPKOsRzZVMg3z3vA0DTpq_6wVi7yNjIinZ9cYm4G_c-FksNBhsWnlpkOK-i5H5nwGCsC0cnc8Nu3W5WSMcEc2N3xS_9iUWFSMphG4BCByl9zKwoXAlQjA_K45xCHsU",
+                      "Course"
+                    )
+                  }
+                >
+                  <div
+                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                    style={{
+                      backgroundImage:
+                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBnzkhTbfD6_aRvTxfSPuRimGvXaFWc2Xp9eUGbupYFn5B_yxtAX-7tpT061c6nSiDtcSoZCpE590cP3CdKi9fS34tZkyKP_VgDItHxlBKWOewwPsN6xREwGh1vXSyyPyeaswxzfftIpa_klPKOsRzZVMg3z3vA0DTpq_6wVi7yNjIinZ9cYm4G_c-FksNBhsWnlpkOK-i5H5nwGCsC0cnc8Nu3W5WSMcEc2N3xS_9iUWFSMphG4BCByl9zKwoXAlQjA_K45xCHsU")',
+                    }}
+                  />
+                  <div>
+                    <p className="text-[#111418] text-base font-medium leading-normal">
+                      Global Business Strategies
+                    </p>
+                    <p className="text-[#60748a] text-sm font-normal leading-normal">
+                      Learn to navigate international markets and business practices.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  className="flex flex-col gap-3 pb-3 cursor-pointer"
+                  onClick={() =>
+                    openCard(
+                      "Cross-Cultural Communication",
+                      "Enhance your communication skills across different cultures.",
+                      "https://lh3.googleusercontent.com/aida-public/AB6AXuBIqchp3EG0AGCAMsmNDbQ3AtK5vPvW8LKLm7b2dWCQ_NhwYGvoeBVdQqZ8LYLOBPrJQqrDFJMc9ap8fgob6I0tBE56my7rRDgBXGPbSt-aiFDUZjhPEtjF3LcAkIj3u2cWFheNIK-tM2uaww3WaFGL5A66HMwKtTXIU5xmqxIeVBLnw8pNNCZVZTXgJsHGnbuQFrTDKjg5loBo7ZIatTU75xc3-oiLRZFTH6oNrq51N22e56m4gzMej1TKytz4cAsWi9wn7lJg3aE",
+                      "Course"
+                    )
+                  }
+                >
+                  <div
+                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                    style={{
+                      backgroundImage:
+                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIqchp3EG0AGCAMsmNDbQ3AtK5vPvW8LKLm7b2dWCQ_NhwYGvoeBVdQqZ8LYLOBPrJQqrDFJMc9ap8fgob6I0tBE56my7rRDgBXGPbSt-aiFDUZjhPEtjF3LcAkIj3u2cWFheNIK-tM2uaww3WaFGL5A66HMwKtTXIU5xmqxIeVBLnw8pNNCZVZTXgJsHGnbuQFrTDKjg5loBo7ZIatTU75xc3-oiLRZFTH6oNrq51N22e56m4gzMej1TKytz4cAsWi9wn7lJg3aE")',
+                    }}
+                  />
+                  <div>
+                    <p className="text-[#111418] text-base font-medium leading-normal">
+                      Cross-Cultural Communication
+                    </p>
+                    <p className="text-[#60748a] text-sm font-normal leading-normal">
+                      Enhance your communication skills across different cultures.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  className="flex flex-col gap-3 pb-3 cursor-pointer"
+                  onClick={() =>
+                    openCard(
+                      "International Marketing",
+                      "Master marketing strategies for a global audience.",
+                      "https://lh3.googleusercontent.com/aida-public/AB6AXuA9Vhmy-pUTQibA7Oz2tk696aI4BYs-ojgRvWOqQ5PaLUSvWfVIZk7bsNkKmlhJlSI2LPpSdvYMxS9gdYIHU1VruC6-QAulPXGlVEB4_B6kkZnoQCojKgPRS_p5OhC0Pd9LJ9u4s-wHZEENhqAML89ivby-yYGhc5WHP5M2AAd50Roxx2BreubXeyOZTs54mEHSfl8SewBVQyt2vfyPOTLIlJSZIV05bhsQAUx9aYfbc50OOkHL9nBfbq1n-2sCntkPDCJMNUEqzlE",
+                      "Course"
+                    )
+                  }
+                >
+                  <div
+                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                    style={{
+                      backgroundImage:
+                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9Vhmy-pUTQibA7Oz2tk696aI4BYs-ojgRvWOqQ5PaLUSvWfVIZk7bsNkKmlhJlSI2LPpSdvYMxS9gdYIHU1VruC6-QAulPXGlVEB4_B6kkZnoQCojKgPRS_p5OhC0Pd9LJ9u4s-wHZEENhqAML89ivby-yYGhc5WHP5M2AAd50Roxx2BreubXeyOZTs54mEHSfl8SewBVQyt2vfyPOTLIlJSZIV05bhsQAUx9aYfbc50OOkHL9nBfbq1n-2sCntkPDCJMNUEqzlE")',
+                    }}
+                  />
+                  <div>
+                    <p className="text-[#111418] text-base font-medium leading-normal">
+                      International Marketing
+                    </p>
+                    <p className="text-[#60748a] text-sm font-normal leading-normal">
+                      Master marketing strategies for a global audience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
 
               {/* Internships */}
               <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
