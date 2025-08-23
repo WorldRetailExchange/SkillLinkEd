@@ -84,6 +84,16 @@ export default function Layout({ children }: LayoutProps) {
             >
               Tutors
             </Link>
+
+            <Link
+              href="/internationalcourses"
+              className={`text-sm font-medium leading-normal hover:text-[#0d78f2] cursor-pointer transition-colors ${
+                location === "/tutors" ? "text-[#0d78f2]" : "text-[#111418]"
+              }`}
+              data-testid="link-internationalcourses"
+            >
+              International Courses
+            </Link>
           </nav>
         </div>
         <div className="flex flex-1 justify-end gap-8">

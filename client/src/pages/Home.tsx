@@ -64,6 +64,7 @@ export default function Home() {
     queryKey: ["/api/workshops"],
   });
 
+  
   const handleItemClick = (item: any, type: string) => {
     setSelectedItem(item);
     setSelectedType(type);
