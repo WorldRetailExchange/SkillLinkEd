@@ -40,6 +40,36 @@ const InternationalCourses: React.FC = () => {
         {/* Tailwind via CDN to mirror your original file.
             If you already have Tailwind in your build, you can remove this. */}
         <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" />
+        {/* --- Hardening for first-paint: force select styling without waiting for Tailwind --- */}
+        <style>{`
+          .select-control {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 100%;
+            min-width: 0;
+            height: 3.5rem; /* h-14 */
+            border: 1px solid #dbe0e6;
+            border-radius: 0.75rem; /* rounded-xl */
+            background-color: #ffffff;
+            color: #111418;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            padding-left: 1rem;  /* pl-4 */
+            padding-right: 2.75rem; /* room for custom arrow */
+            background-image: var(--select-button-svg);
+            background-repeat: no-repeat;
+            background-size: 24px 24px;
+            background-position: right 0.75rem center; /* right-3 */
+          }
+          .select-control:focus {
+            outline: none;
+            border-color: #3b82f6; /* blue-500 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.45);
+          }
+          /* Prevent text zoom on iOS */
+          .select-control { font-size: 16px; }
+        `}</style>
       </Helmet>
 
       <div
@@ -47,101 +77,52 @@ const InternationalCourses: React.FC = () => {
         style={rootStyle}
       >
         <div className="layout-container flex h-full grow flex-col">
-          {/* <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
-            <div className="flex items-center gap-4 text-[#111418]">
-              <div className="size-4">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
-              <h2 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">
-                Study Abroad
-              </h2>
-            </div>
-
-            <div className="flex flex-1 justify-end gap-8">
-              <div className="flex items-center gap-9">
-                <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
-                  Tutors
-                </a>
-                <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
-                  Courses
-                </a>
-                <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
-                  Events
-                </a>
-                <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
-                  Workshops
-                </a>
-                <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
-                  International Opportunities
-                </a>
-              </div>
-
-              <div
-                className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                style={{
-                  backgroundImage:
-                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8K-N4TiN7PC9oB1bAWRE_3pjqPI1skNYDAd1Qgx5qibc4ymET1fpaUIc7MtMBR9EmT0gpZ7YkK_hwS-ehFum3sYgojgulFkVb0nxKnJYMVNWv7qIE6OEjTuf4B0ux-0B5VsII20jqgpi7n3KIQHxnLWDqnrnLi4mNXMqcZ79ihgKHQnCVezK5mb9CL8tjo_HZq-awBWvSBML4T6JmzjZv_a11PHCmDZBjoLg2zvO4f9N9L_gNGvLLtIw7C8Gf2AdAQ0ONTEXEsSA")',
-                }}
-              />
-            </div>
-          </header> */}
-
           <div className="gap-1 px-6 flex flex-1 justify-center py-5">
             {/* Left filter column */}
             <div className="layout-content-container flex flex-col w-80">
-  <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
-    Filters
-  </h3>
+              <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
+                Filters
+              </h3>
 
-  {/* Category */}
-  <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-    <label className="flex flex-col min-w-40 flex-1 relative">
-      <p className="text-[#111418] text-base font-medium leading-normal pb-2">Category</p>
-      <select className="appearance-none flex w-full min-w-0 flex-1 rounded-xl border border-[#dbe0e6] bg-white text-[#111418] h-14 pl-4 pr-10 text-base font-normal leading-normal focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <option value="">Select Category</option>
-        <option value="online">Online</option>
-        <option value="offline">Offline</option>
-      </select>
-      {/* dropdown arrow */}
-      {/* <span className="absolute right-4 top-11 pointer-events-none text-gray-500">▼</span> */}
-    </label>
-  </div>
+              {/* Category */}
+              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label className="flex flex-col min-w-40 flex-1 relative">
+                  <p className="text-[#111418] text-base font-medium leading-normal pb-2">Category</p>
+                  <select className="select-control">
+                    <option value="">Select Category</option>
+                    <option value="online">Online</option>
+                    <option value="offline">Offline</option>
+                  </select>
+                </label>
+              </div>
 
-  {/* Country */}
-  <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-    <label className="flex flex-col min-w-40 flex-1 relative">
-      <p className="text-[#111418] text-base font-medium leading-normal pb-2">Country</p>
-      <select className="appearance-none flex w-full min-w-0 flex-1 rounded-xl border border-[#dbe0e6] bg-white text-[#111418] h-14 pl-4 pr-10 text-base font-normal leading-normal focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <option value="">Select Country</option>
-        <option value="london">London</option>
-        <option value="japan">Japan</option>
-        <option value="berlin">Berlin</option>
-        <option value="hongkong">Hong Kong</option>
-      </select>
-      {/* <span className="absolute right-4 top-11 pointer-events-none text-gray-500">▼</span> */}
-    </label>
-  </div>
+              {/* Country */}
+              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label className="flex flex-col min-w-40 flex-1 relative">
+                  <p className="text-[#111418] text-base font-medium leading-normal pb-2">Country</p>
+                  <select className="select-control">
+                    <option value="">Select Country</option>
+                    <option value="london">London</option>
+                    <option value="japan">Japan</option>
+                    <option value="berlin">Berlin</option>
+                    <option value="hongkong">Hong Kong</option>
+                  </select>
+                </label>
+              </div>
 
-  {/* Duration */}
-  <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-    <label className="flex flex-col min-w-40 flex-1 relative">
-      <p className="text-[#111418] text-base font-medium leading-normal pb-2">Duration</p>
-      <select className="appearance-none flex w-full min-w-0 flex-1 rounded-xl border border-[#dbe0e6] bg-white text-[#111418] h-14 pl-4 pr-10 text-base font-normal leading-normal focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <option value="">Select Duration</option>
-        <option value="1year">One Year</option>
-        <option value="2year">Two Year</option>
-        <option value="3year">Three Year</option>
-      </select>
-      {/* <span className="absolute right-4 top-11 pointer-events-none text-gray-500">▼</span> */}
-    </label>
-  </div>
-</div>
-
+              {/* Duration */}
+              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label className="flex flex-col min-w-40 flex-1 relative">
+                  <p className="text-[#111418] text-base font-medium leading-normal pb-2">Duration</p>
+                  <select className="select-control">
+                    <option value="">Select Duration</option>
+                    <option value="1year">One Year</option>
+                    <option value="2year">Two Year</option>
+                    <option value="3year">Three Year</option>
+                  </select>
+                </label>
+              </div>
+            </div>
 
             {/* Right main content */}
             <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
@@ -246,7 +227,7 @@ const InternationalCourses: React.FC = () => {
                 </div>
               </div>
 
-                            {/* Courses */}
+              {/* Courses */}
               <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
                 Courses
               </h3>
@@ -335,7 +316,6 @@ const InternationalCourses: React.FC = () => {
                   </div>
                 </div>
               </div>
-
 
               {/* Internships */}
               <h3 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
@@ -434,96 +414,93 @@ const InternationalCourses: React.FC = () => {
 
       {/* Expanded Card / Detail Panel */}
       {selected && (
-  <div
-    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
-    onClick={closeCard}
-  >
-    <div
-      className="w-full max-w-2xl rounded-2xl bg-white shadow-2xl overflow-hidden relative"
-      onClick={(e) => e.stopPropagation()}
-    >
-      {/* Close */}
-      {/* Close button */}
-<button
-  onClick={closeCard}
-  aria-label="Close"
-  className="absolute top-4 right-4 z-10 rounded-full bg-white shadow-md w-9 h-9 flex items-center justify-center text-gray-700 hover:bg-gray-100 transition"
->
-  ✕
-</button>
-
-
-      {/* Header image with badges */}
-      <div className="relative">
         <div
-          className="w-full h-56 bg-cover bg-center"
-          style={{
-            backgroundImage: `url("${
-              selected.image ||
-              "https://source.unsplash.com/800x400/?students,international"
-            }")`,
-          }}
-        />
-        <div className="absolute bottom-3 left-3 flex gap-2">
-          <span className="px-2.5 py-1 text-xs rounded-full bg-white/90 border border-[#dbe0e6] text-[#111418]">
-            {selected.section || "Opportunity"}
-          </span>
-          <span className="px-2.5 py-1 text-xs rounded-full bg-white/90 border border-[#dbe0e6] text-[#111418]">
-            Featured
-          </span>
-        </div>
-      </div>
-
-      {/* Body */}
-      <div className="p-6">
-        <h2 className="text-2xl font-bold text-[#111418] mb-1">{selected.title}</h2>
-        <p className="text-xs text-[#60748a] mb-4">
-          {selected.section ? `Category: ${selected.section}` : "International Opportunity"}
-        </p>
-
-        <p className="text-base text-[#111418] leading-relaxed mb-6">
-          {selected.description ||
-            "This international opportunity helps students gain global exposure, enhance skills, and build a standout profile."}
-        </p>
-
-        {/* Quick highlights (static, no new data fields required) */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-          <div className="rounded-xl border border-[#dbe0e6] p-3">
-            <p className="text-xs text-[#60748a]">Format</p>
-            <p className="text-sm font-medium text-[#111418]">
-              {selected.section || "Program"}
-            </p>
-          </div>
-          <div className="rounded-xl border border-[#dbe0e6] p-3">
-            <p className="text-xs text-[#60748a]">Audience</p>
-            <p className="text-sm font-medium text-[#111418]">Students</p>
-          </div>
-          <div className="rounded-xl border border-[#dbe0e6] p-3">
-            <p className="text-xs text-[#60748a]">Availability</p>
-            <p className="text-sm font-medium text-[#111418]">Limited slots</p>
-          </div>
-        </div>
-
-        {/* Actions */}
-        <div className="flex gap-3">
-          <button
-            onClick={() => alert(`Book Slots for: ${selected.title}`)}
-            className="flex-1 rounded-xl px-4 py-3 text-white bg-[#111418] hover:opacity-90 transition"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+          onClick={closeCard}
+        >
+          <div
+            className="w-full max-w-2xl rounded-2xl bg-white shadow-2xl overflow-hidden relative"
+            onClick={(e) => e.stopPropagation()}
           >
-            Book Slots
-          </button>
-          <button
-            onClick={() => alert(`Schedule Trial for: ${selected.title}`)}
-            className="flex-1 rounded-xl px-4 py-3 border border-[#dbe0e6] hover:bg-gray-50 transition"
-          >
-            Schedule Trial
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-)}
+            {/* Close button */}
+            <button
+              onClick={closeCard}
+              aria-label="Close"
+              className="absolute top-4 right-4 z-10 rounded-full bg-white shadow-md w-9 h-9 flex items-center justify-center text-gray-700 hover:bg-gray-100 transition"
+            >
+              ✕
+            </button>
 
+            {/* Header image with badges */}
+            <div className="relative">
+              <div
+                className="w-full h-56 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url("${
+                    selected.image ||
+                    "https://source.unsplash.com/800x400/?students,international"
+                  }")`,
+                }}
+              />
+              <div className="absolute bottom-3 left-3 flex gap-2">
+                <span className="px-2.5 py-1 text-xs rounded-full bg-white/90 border border-[#dbe0e6] text-[#111418]">
+                  {selected.section || "Opportunity"}
+                </span>
+                <span className="px-2.5 py-1 text-xs rounded-full bg-white/90 border border-[#dbe0e6] text-[#111418]">
+                  Featured
+                </span>
+              </div>
+            </div>
+
+            {/* Body */}
+            <div className="p-6">
+              <h2 className="text-2xl font-bold text-[#111418] mb-1">{selected.title}</h2>
+              <p className="text-xs text-[#60748a] mb-4">
+                {selected.section ? `Category: ${selected.section}` : "International Opportunity"}
+              </p>
+
+              <p className="text-base text-[#111418] leading-relaxed mb-6">
+                {selected.description ||
+                  "This international opportunity helps students gain global exposure, enhance skills, and build a standout profile."}
+              </p>
+
+              {/* Quick highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                <div className="rounded-xl border border-[#dbe0e6] p-3">
+                  <p className="text-xs text-[#60748a]">Format</p>
+                  <p className="text-sm font-medium text-[#111418]">
+                    {selected.section || "Program"}
+                  </p>
+                </div>
+                <div className="rounded-xl border border-[#dbe0e6] p-3">
+                  <p className="text-xs text-[#60748a]">Audience</p>
+                  <p className="text-sm font-medium text-[#111418]">Students</p>
+                </div>
+                <div className="rounded-xl border border-[#dbe0e6] p-3">
+                  <p className="text-xs text-[#60748a]">Availability</p>
+                  <p className="text-sm font-medium text-[#111418]">Limited slots</p>
+                </div>
+              </div>
+
+              {/* Actions */}
+              <div className="flex gap-3">
+                <button
+                  onClick={() => alert(`Book Slots for: ${selected.title}`)}
+                  className="flex-1 rounded-xl px-4 py-3 text-white bg-[#111418] hover:opacity-90 transition"
+                >
+                  Book Slots
+                </button>
+                <button
+                  onClick={() => alert(`Schedule Trial for: ${selected.title}`)}
+                  className="flex-1 rounded-xl px-4 py-3 border border-[#dbe0e6] hover:bg-gray-50 transition"
+                >
+                  Schedule Trial
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
